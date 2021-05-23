@@ -15,17 +15,5 @@ div { font-family:yellow;
       background-color: black;
 }
 
-.block {
-  display: block;
-  width: 100%;
-  border: none;
-  background-color: #ffff24;  /* yellow */
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-}
-
-
 footer { text-align: right; 
          font-style: italic;}
