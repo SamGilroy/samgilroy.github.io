@@ -15,7 +15,7 @@ var products = [
 		name: "Apples",
 		lactoseIntolerant: true,
 		nutAllergy: true,
-        organic: false,
+        organic: true,
 		price: 2.00
 	},
 	{
