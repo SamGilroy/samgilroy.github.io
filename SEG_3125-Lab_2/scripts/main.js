@@ -35,11 +35,9 @@ function populateListProductChoices(c1,c2,c3, slct2) {
     
     var s1 = [chk1.checked, chk2.checked, chk3.checked];
     
-    // 0 = nut allergy, 1 = lactose intolerant, 2 = only organic products
-    
     var s2 = document.getElementById(slct2);
 	
-	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty	
+	// s2 represents the <div> in the Products tab, which shows the product list, so first set it empty	
 	
     s2.innerHTML = "";
 		
@@ -60,7 +58,7 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 	for (i = 0; i < optionArray.length; i++) {
 			
 		var productName = products[optionArray[i]].name;
-		var pricey = products[optionArray[i]].price;
+		var price = products[optionArray[i]].price;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
@@ -71,7 +69,7 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName + " - " + pricey));
+		label.appendChild(document.createTextNode(productName + " - " + price));
 		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
