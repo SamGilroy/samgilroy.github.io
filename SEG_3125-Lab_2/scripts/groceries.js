@@ -12,13 +12,6 @@ var products = [
 		price: 1.99
 	},
 	{
-		name: "Organic Apples",
-		lactoseIntolerant: true,
-		nutAllergy: true,
-        organic: true,
-		price: 2.13
-	},
-	{
 		name: "Bread",
 		lactoseIntolerant: true,
 		nutAllergy: true,
@@ -74,12 +67,19 @@ var products = [
         organic: false,
 		price: 5.22
 	},
+	{
+		name: "Organic Apples",
+		lactoseIntolerant: true,
+		nutAllergy: true,
+        organic: true,
+		price: 6.35
+	},
   {
 		name: "Pork Chops",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: false,
-		price: 6.35
+		price: 7.95
 	},
 	{
 		name: "Salmon",
