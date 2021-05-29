@@ -101,6 +101,9 @@ function restrictListProducts(prods, restriction) {
 		else if ((restriction.includes("organic")) && (prods[i].organic == true)){
 			product_names.push(prods[i]); 
 		}
+		else if (restriction.includes("none")){
+			product_names.push(prods[i]);
+		}
 	}
 	return product_names;
 }
@@ -110,9 +113,8 @@ function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
 	for (let i=0; i<products.length; i+=1) {
 		if (chosenProducts.indexOf(products[i].name) > -1){
-			totalPrice += products[i].price;
+			totalPrice += parseInt(products[i].price.toFixed(2));
 		}
 	}
-	totalPrice = parseInt(totalPrice.toFixed(2));
 	return totalPrice;
 }
