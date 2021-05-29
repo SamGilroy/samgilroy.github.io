@@ -110,4 +110,3 @@ function getTotalPrice(chosenProducts) {
 	//Rounds output to 2 decimal places
 	return Math.round(totalPrice * 100) / 100;
 }
-}
