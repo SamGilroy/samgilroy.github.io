@@ -98,8 +98,7 @@ function selectedItems(){
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
-			para.appendChild(+ " - $" + ele[i].price);
+			para.appendChild(document.createTextNode(ele[i].value + " - $" + ele[i].price));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}
