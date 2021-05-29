@@ -86,10 +86,10 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+unction restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction.includes("nutAllergy")) && (restriction.includes("lactoseIntolerant")) && (prods[i].lactoseIntolerant == true) && (prods[i].nutAllergy == true)){
+		if ((restriction.includes("nutAllergy")) && (restriction.includes("lactoseIntolerant")) && (prods[i].lactoseIntolerant == true) && (prods[i].nutAllergy == true)&&(restriction.includes("organic")) && (prods[i].organic == true)){
 			product_names.push(prods[i]);
 		}
 		else if ((restriction.includes("lactoseIntolerant")) && !(restriction.includes("nutAllergy")) && (prods[i].lactoseIntolerant == true)){
@@ -100,6 +100,9 @@ function restrictListProducts(prods, restriction) {
 		}
 		else if ((restriction.includes("organic")) && (prods[i].organic == true)){
 			product_names.push(prods[i]); 
+		}
+		else if (restriction.includes("none")){
+			product_names.push(prods[i]);
 		}
 	}
 	return product_names;
