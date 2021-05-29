@@ -90,7 +90,10 @@ function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if (!restriction.includes("nutAllergy") && !restriction.includes("lactoseIntolerant") && !restriction.includes("organic")){
-			product_names.push(prods[i]);
+			for (let i=0; i<prods.length; i+=1) {
+				product_names.push(prods[i]);
+			}
+			return product_names;
 		}
 		else if ((restriction.includes("nutAllergy")) && (restriction.includes("lactoseIntolerant")) && (prods[i].lactoseIntolerant == true) && (prods[i].nutAllergy == true)){
 			product_names.push(prods[i]);
