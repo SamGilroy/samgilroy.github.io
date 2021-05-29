@@ -113,7 +113,7 @@ function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
 	for (let i=0; i<products.length; i+=1) {
 		if (chosenProducts.indexOf(products[i].name) > -1){
-			totalPrice += parseInt(products[i].price.toFixed(2));
+			totalPrice += parseInt(products[i].price.toFixed(4));
 		}
 	}
 	return totalPrice;
