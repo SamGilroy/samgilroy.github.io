@@ -50,7 +50,3 @@ footer {position: fixed;
         bottom: 0;
         right: 1em; 
         font-style: italic;}
-        
-.banner { width:100%;
-	  background-image:url(images/banner.jpeg);
-}
