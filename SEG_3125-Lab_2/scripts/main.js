@@ -76,6 +76,13 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 		
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));
+		
+		// Show a picture of the item and add an extra space.
+		var image = document.createElement("img");
+		image.src = products[optionArray[i]].img;
+		image.alt = productName;
+		s2.appendChild(image);
+		
 		s2.appendChild(document.createElement("br"));
 		s2.appendChild(document.createElement("br"));
 	}
@@ -95,9 +102,10 @@ function selectedItems(){
 	
 	// build list of selected item
 	var para = document.createElement("P");
-	para.innerHTML = "You selected : ";
+	para.innerHTML = "Yeehaw! Y'all picked: ";
 	para.appendChild(document.createElement("br"));
-	for (let i = 0; i < ele.length; i++) { 
+	para.appendChild(document.createElement("br"));
+	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
@@ -107,6 +115,6 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
 		
 }
