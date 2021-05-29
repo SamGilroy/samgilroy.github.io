@@ -92,6 +92,9 @@ unction restrictListProducts(prods, restriction) {
 		if ((restriction.includes("nutAllergy")) && (restriction.includes("lactoseIntolerant")) && (prods[i].lactoseIntolerant == true) && (prods[i].nutAllergy == true)&&(restriction.includes("organic")) && (prods[i].organic == true)){
 			product_names.push(prods[i]);
 		}
+		else if ((restriction.includes("nutAllergy")) && (restriction.includes("lactoseIntolerant")) && (prods[i].lactoseIntolerant == true) && (prods[i].nutAllergy == true)){
+			product_names.push(prods[i]);
+		}
 		else if ((restriction.includes("lactoseIntolerant")) && !(restriction.includes("nutAllergy")) && (prods[i].lactoseIntolerant == true)){
 			product_names.push(prods[i]);
 		}
