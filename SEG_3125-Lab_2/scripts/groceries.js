@@ -95,22 +95,15 @@ function fullArray(prods) {
 }
 
 function restrictListProducts(prods, restriction) {
-	let product_names = [];
+	let product_list = [];
 	for (let i=0; i<prods.length; i+=1) {
-		else if ((restriction.includes("nutAllergy")) && (restriction.includes("lactoseIntolerant")) && (prods[i].lactoseIntolerant == true) && (prods[i].nutAllergy == true)){
-			product_names.push(prods[i]);
-		}
-		else if ((restriction.includes("lactoseIntolerant")) && !(restriction.includes("nutAllergy")) && (prods[i].lactoseIntolerant == true)){
-			product_names.push(prods[i]);
-		}
-		else if ((restriction.includes("nutAllergy")) && !(restriction.includes("lactoseIntolerant")) && (prods[i].nutAllergy == true)){
-			product_names.push(prods[i]);
-		}
-		else if ((restriction.includes("organic")) && (prods[i].organic == true)){
-			product_names.push(prods[i]); 
-		}
+
+		if (!(restriction[2] & (restriction[2] ^ prods[i].organic) | restriction[0] & (restriction[0] ^ prods[i].nutAllergy) | restriction[1] & (restriction[1] ^ prods[i].lactoseIntolerant))){
+			product_list.push(i);
+		}				
 	}
-	return product_names;
+	
+	return product_list;
 }
 
 // Calculate the total price of items, with received parameter being a list of products
@@ -121,5 +114,8 @@ function getTotalPrice(chosenProducts) {
 			totalPrice += products[i].price;
 		}
 	}
-	return parseFloat(totalPrice.toFixed(2));
+	
+	//Rounds output to 2 decimal places
+	return Math.round(totalPrice * 100) / 100;
+}
 }
