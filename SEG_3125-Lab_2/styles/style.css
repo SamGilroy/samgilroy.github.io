@@ -1,21 +1,5 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
 
-html {
-  font-family: 'Raleway', sans-serif;
-}
-
-h1 {
-  text-align: center;
-}
-
-p {
-  font-size: 20px;
-}
-
-footer {
-  text-align: center;
-}
-
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -31,8 +15,7 @@ footer {
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 20px;
+  transition: 0.1s;
 }
 
 /* Change background color of buttons on hover */
@@ -51,21 +34,23 @@ footer {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  height: 100%;
 }
 
-#addCart {
-  font-size: 16px;
-  padding: 7px;
-  border-radius: 7px;
-  margin: 10px;
+body { font-family:verdana;
+      font-size:130%;
 }
 
-#displayCart {
-  font-size: 16px;
-  margin: 7px;
-}
+h2 { font-style: italic;}
 
-#displayProduct {
-  font-size: 16px;
+.bantitle { color:red;
+     -webkit-text-stroke-width: 2px;
+     -webkit-text-stroke-color: black;
+}
+footer {position: fixed;
+        bottom: 0;
+        right: 1em; 
+        font-style: italic;}
+        
+.banner { width:100%;
+	  background-image:url(images/banner.jpeg);
 }
