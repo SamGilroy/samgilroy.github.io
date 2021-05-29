@@ -61,6 +61,13 @@ var products = [
 		price: 4.50
 	},
 	{
+		name: "Organic Milk",
+		lactoseIntolerant: false,
+		nutAllergy: true,
+        organic: true,
+		price: 5.20
+	},
+	{
 		name: "Almond Milk",
 		lactoseIntolerant: true,
 		nutAllergy: false,
