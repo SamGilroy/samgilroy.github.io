@@ -98,13 +98,13 @@ function selectedItems(){
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value + " - $" + products[ele[i]].price));
+			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}
 	}
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is mmm $" + getTotalPrice(chosenProducts)));
+	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
 		
 }
