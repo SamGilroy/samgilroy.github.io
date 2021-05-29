@@ -101,9 +101,6 @@ function restrictListProducts(prods, restriction) {
 		else if ((restriction.includes("organic")) && (prods[i].organic == true)){
 			product_names.push(prods[i]); 
 		}
-		else {
-			product_names.push(prods[i]);
-		}
 	}
 	return product_names;
 }
