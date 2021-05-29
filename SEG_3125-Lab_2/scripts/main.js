@@ -76,13 +76,6 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 		
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));
-		
-		// Show a picture of the item and add an extra space.
-		var image = document.createElement("img");
-		image.src = products[optionArray[i]].img;
-		image.alt = productName;
-		s2.appendChild(image);
-		
 		s2.appendChild(document.createElement("br"));
 		s2.appendChild(document.createElement("br"));
 	}
@@ -102,7 +95,7 @@ function selectedItems(){
 	
 	// build list of selected item
 	var para = document.createElement("P");
-	para.innerHTML = "Yeehaw! Y'all picked: ";
+	para.innerHTML = "Your order: ";
 	para.appendChild(document.createElement("br"));
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
