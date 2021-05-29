@@ -26,15 +26,18 @@ function openInfo(evt, tabName) {
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
-function populateListProductChoices(slct1, slct2) {
-    var s1 = document.getElementsByName(slct1);
+function populateListProductChoices(c1,c2,c3, slct2) {
+
+    // Each restriction is placed in array that is sent to the restriction function.
+    var chk1 = document.getElementById(c1);
+    var chk2 = document.getElementById(c2);
+    var chk3 = document.getElementById(c3);
+    
+    var s1 = [chk1.checked, chk2.checked, chk3.checked];
+    
+    // 0 = nut allergy, 1 = lactose intolerant, 2 = only organic products
+    
     var s2 = document.getElementById(slct2);
-	var chosenPrefs = [];
-	for (i = 0; i < s1.length; i ++) {
-		if (s1[i].checked) {
-			chosenPrefs.push(s1[i].value);
-		}
-	}
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
