@@ -104,7 +104,7 @@ unction restrictListProducts(prods, restriction) {
 		else if ((restriction.includes("organic")) && (prods[i].organic == true)){
 			product_names.push(prods[i]); 
 		}
-		else if (restriction.includes("none")){
+		else {
 			product_names.push(prods[i]);
 		}
 	}
