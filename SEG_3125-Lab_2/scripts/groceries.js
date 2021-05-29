@@ -116,5 +116,5 @@ function getTotalPrice(chosenProducts) {
 			totalPrice += products[i].price;
 		}
 	}
-	return totalPrice;
+	return parseFloat(totalPrice.toFixed(2));
 }
