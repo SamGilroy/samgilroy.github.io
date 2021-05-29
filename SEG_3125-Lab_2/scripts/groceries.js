@@ -16,7 +16,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
-		price: 2.10
+		price: 2.101
 	},
 	{
 		name: "Bread",
@@ -30,14 +30,14 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: false,
         organic: true,
-		price: 3.00
+		price: 3.001
 	},
 	{
 		name: "Organic Canned Corn",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
-		price: 3.50
+		price: 3.501
 	},
 	{
 		name: "1% Milk",
@@ -51,42 +51,42 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: false,
-		price: 4.20
+		price: 4.201
 	},
 	{
 		name: "Cheese",
 		lactoseIntolerant: false,
 		nutAllergy: true,
         organic: false,
-		price: 4.50
+		price: 4.501
 	},
 	{
 		name: "Organic Milk",
 		lactoseIntolerant: false,
 		nutAllergy: true,
         organic: true,
-		price: 5.00
+		price: 5.001
 	},
 	{
 		name: "Almond Milk",
 		lactoseIntolerant: true,
 		nutAllergy: false,
         organic: false,
-		price: 5.20
+		price: 5.201
 	},
   {
 		name: "Pork Chops",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: false,
-		price: 6.30
+		price: 6.301
 	},
 	{
 		name: "Salmon",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: false,
-		price: 10.00
+		price: 10.001
 	}
 ];
 
