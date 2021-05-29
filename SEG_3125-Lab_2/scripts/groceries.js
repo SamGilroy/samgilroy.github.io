@@ -16,7 +16,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
-		price: 2.00
+		price: 2.10
 	},
 	{
 		name: "Bread",
@@ -51,7 +51,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: false,
-		price: 4.00
+		price: 4.20
 	},
 	{
 		name: "Cheese",
@@ -65,7 +65,7 @@ var products = [
 		lactoseIntolerant: false,
 		nutAllergy: true,
         organic: true,
-		price: 5.20
+		price: 5.00
 	},
 	{
 		name: "Almond Milk",
