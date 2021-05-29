@@ -104,6 +104,9 @@ function restrictListProducts(prods, restriction) {
 		else if (restriction.includes("none")){
 			product_names.push(prods[i]);
 		}
+		else {
+			product_names.push(prods[i]);	
+		}
 	}
 	return product_names;
 }
