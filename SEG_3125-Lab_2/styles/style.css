@@ -15,7 +15,7 @@
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.1s;
+  transition: 0.3s;
 }
 
 /* Change background color of buttons on hover */
@@ -42,7 +42,7 @@ body { font-family:verdana;
 
 h2 { font-style: italic;}
 
-.bantitle { color:red;
+.bantitle {color:blue;
      -webkit-text-stroke-width: 2px;
      -webkit-text-stroke-color: black;
 }
