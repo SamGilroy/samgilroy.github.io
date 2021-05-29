@@ -5,14 +5,14 @@
 
 var products = [
 	{
-		name: "Broccoli",
+		name: "Organic Broccoli",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
 		price: 1.99
 	},
 	{
-		name: "Apples",
+		name: "Organic Apples",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
@@ -26,14 +26,14 @@ var products = [
 		price: 2.35
 	},	
 	{
-		name: "Peanut Butter",
+		name: "Organic Peanut Butter",
 		lactoseIntolerant: true,
 		nutAllergy: false,
         organic: true,
 		price: 3.00
 	},
 	{
-		name: "Canned Corn",
+		name: "Organic Canned Corn",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
@@ -78,14 +78,14 @@ var products = [
 		name: "Pork Chops",
 		lactoseIntolerant: true,
 		nutAllergy: true,
-        organic: true,
+        organic: false,
 		price: 6.30
 	},
 	{
 		name: "Salmon",
 		lactoseIntolerant: true,
 		nutAllergy: true,
-        organic: true,
+        organic: false,
 		price: 10.00
 	}
 ];
