@@ -86,6 +86,14 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
+function fullArray(prods) {
+	let product_names = [];
+	for (let i=0; i<prods.length; i+=1) {
+		product_names.push(prods[i]);
+	}
+	return product_names;
+}
+
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
