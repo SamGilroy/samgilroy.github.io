@@ -58,7 +58,7 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 	for (i = 0; i < optionArray.length; i++) {
 			
 		var productName = products[optionArray[i]].name;
-		var price = Math.round(products[optionArray[i]].price * 100) / 100;
+		var price = products[optionArray[i]].price;
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
