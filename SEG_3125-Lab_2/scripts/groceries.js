@@ -90,7 +90,7 @@ function restrictListProducts(prods, restriction) {
 	let product_list = [];
 	for (let i=0; i<prods.length; i+=1) {
 
-		if (!(restriction[2] & (restriction[2] ^ prods[i].organic) | restriction[0] & (restriction[0] ^ prods[i].nutAllergy) | restriction[1] & (restriction[1] ^ prods[i].lactoseIntolerant))){
+		if (!(restriction[2] & (restriction[2] ^ prods[i].organic) | restriction[1] & (restriction[1] ^ prods[i].nutAllergy) | restriction[0] & (restriction[0] ^ prods[i].lactoseIntolerant))){
 			product_list.push(i);
 		}				
 	}
