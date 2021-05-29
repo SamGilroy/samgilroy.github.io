@@ -103,7 +103,6 @@ function selectedItems(){
 			chosenProducts.push(ele[i].value);
 		}
 	}
-		
 	// add paragraph and total price
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
