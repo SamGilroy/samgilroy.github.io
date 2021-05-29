@@ -57,7 +57,7 @@ var products = [
 		name: "Cheese",
 		lactoseIntolerant: false,
 		nutAllergy: true,
-        organic: true,
+        organic: false,
 		price: 4.50
 	},
 	{
@@ -116,5 +116,5 @@ function getTotalPrice(chosenProducts) {
 			totalPrice += products[i].price;
 		}
 	}
-	return totalPrice;
+	return totalPrice.toFixed(2);
 }
