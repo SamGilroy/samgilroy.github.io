@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp -->
+	<link href="style/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 
+    <title>Supermarket Extreme</title>
+
+</head>
+
+<body>
+    <h1>Supermarket Extreme</h1>
+
+    <!-- Tab links, each one with an onclick event associated with it -->
+    <div class="tab">
+    <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+    <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+    <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Client" class="tabcontent">
+    <h2>Client Information</h2>
+    <p>Tell us a bit about you. Please select all diet preferences that apply to you:</p>
+        <div id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+            <input type="checkbox" id="lactoseIntolerant" name="dietSelect" value="lactoseIntolerant">
+            <label for="lactoseIntolerant"> Lactose intolerant</label><br>
+            <input type="checkbox" id="nutAllergy" name="dietSelect" value="nutAllergy">
+            <label for="nutAllergy"> Nut allergy</label><br>
+            <input type="checkbox" id="organic" name="dietSelect" value="organic">
+            <label for="organic"> Organic</label><br>
+            <input type="checkbox" id="none" name="dietSelect" value="none">
+            <label for="none"> None of the above</label><br>
+        </div>
+    </div>
+
+    <div id="Products" class="tabcontent">
+    <h2>Your targeted products</h2>
+    <p>We preselected products based on your preferences.</p>
+        Choose items to buy:
+        <div id="displayProduct"></div>
+        <button id="addCart" type="button" class="block" onclick="selectedItems()">
+            Add selected items to cart.
+        </button>
+    </div>
+
+    <div id="Cart" class="tabcontent">
+    <h2>Cart</h2>
+    <p>Here is your cart.</p>
+    <div id="displayCart"></div>
+    </div>
+
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/index.js"></script>
+
+    <footer>Made by Benjamin Dover</footer>
+</body>
+</html>
