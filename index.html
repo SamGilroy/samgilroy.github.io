@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SuperMarket Extreme</title>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<!-- Load all products by default -->
+<body onload="populateListProductChoices('c1','c2','c3', 'displayProduct')">
+
+<div class = "banner">
+<h1 class = "bantitle">SuperMarket Extreme</h1>
+</div>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you. Please select all diet preferences that apply to you:</p>
+	Choose your restrictions:<br><br>
+	<input type="checkbox" id="c1" name="c1" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
+  	<label for="c1">Lactose intolerant</label><br>  
+  	<input type="checkbox" id="c2" name="c2" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
+  	<label for="c2">Nut allergy</label><br>
+  	<input type="checkbox" id="c3" name="c3" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
+  	<label for="c3">Organic only</label><br>
+  	
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your preferences.</p>
+	 Choose items to buy:
+	 <br><br>
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Shopping Cart</h3>
+  <div id="displayCart">Your cart is currently empty.</div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+
+<footer>
+Website designed by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Benjamin Dover<a/>
+</footer>
+
+</html>
