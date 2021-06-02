@@ -10,6 +10,8 @@ var products = [
 		nutAllergy: true,
         organic: true,
 		price: 1.99
+		img: "images/broccoli.png",
+		
 	},
 	{
 		name: "Bread",
@@ -17,6 +19,7 @@ var products = [
 		nutAllergy: true,
         organic: false,
 		price: 2.35
+		img: "images/bread.png",
 	},	
 	{
 		name: "Organic Peanut Butter",
@@ -24,6 +27,7 @@ var products = [
 		nutAllergy: false,
         organic: true,
 		price: 3.00
+		img: "images/peanutbutter.png",
 	},
 	{
 		name: "Organic Canned Corn",
@@ -31,6 +35,7 @@ var products = [
 		nutAllergy: true,
         organic: true,
 		price: 3.50
+		img: "images/corn.png",
 	},
 	{
 		name: "1% Milk",
@@ -38,6 +43,7 @@ var products = [
 		nutAllergy: true,
         organic: false,
 		price: 3.99
+		img: "images/1pmilk.png",
 	},
 	{
 		name: "Strawberries",
@@ -45,6 +51,7 @@ var products = [
 		nutAllergy: true,
         organic: false,
 		price: 4.25
+		img: "images/strawberries.png",
 	},
 	{
 		name: "Cheese",
@@ -52,6 +59,7 @@ var products = [
 		nutAllergy: true,
         organic: false,
 		price: 4.50
+		img: "images/cheese.png",
 	},
 	{
 		name: "Organic Milk",
@@ -59,6 +67,7 @@ var products = [
 		nutAllergy: true,
         organic: true,
 		price: 5.00
+		img: "images/omilk.png",
 	},
 	{
 		name: "Almond Milk",
@@ -66,6 +75,7 @@ var products = [
 		nutAllergy: false,
         organic: false,
 		price: 5.25
+		img: "images/amilk.png",
 	},
 	{
 		name: "Organic Apples",
@@ -73,6 +83,7 @@ var products = [
 		nutAllergy: true,
         organic: true,
 		price: 6.35
+		img: "images/apples.png",
 	},
   {
 		name: "Pork Chops",
@@ -80,6 +91,7 @@ var products = [
 		nutAllergy: true,
         organic: false,
 		price: 7.95
+	  img: "images/pork.png",
 	},
 	{
 		name: "Salmon",
@@ -87,6 +99,7 @@ var products = [
 		nutAllergy: true,
         organic: false,
 		price: 10.00
+		img: "images/salmon.png",
 	}
 ];
 
