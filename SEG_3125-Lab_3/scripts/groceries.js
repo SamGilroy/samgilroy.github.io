@@ -9,7 +9,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
-		price: 1.99
+		price: 1.99,
 		img: "images/broccoli.png",
 		
 	},
@@ -18,7 +18,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: false,
-		price: 2.35
+		price: 2.35,
 		img: "images/bread.png",
 	},	
 	{
@@ -26,7 +26,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: false,
         organic: true,
-		price: 3.00
+		price: 3.00,
 		img: "images/peanutbutter.png",
 	},
 	{
@@ -34,7 +34,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
-		price: 3.50
+		price: 3.50,
 		img: "images/corn.png",
 	},
 	{
@@ -42,7 +42,7 @@ var products = [
 		lactoseIntolerant: false,
 		nutAllergy: true,
         organic: false,
-		price: 3.99
+		price: 3.99,
 		img: "images/1pmilk.png",
 	},
 	{
@@ -50,7 +50,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: false,
-		price: 4.25
+		price: 4.25,
 		img: "images/strawberries.png",
 	},
 	{
@@ -58,7 +58,7 @@ var products = [
 		lactoseIntolerant: false,
 		nutAllergy: true,
         organic: false,
-		price: 4.50
+		price: 4.50,
 		img: "images/cheese.png",
 	},
 	{
@@ -66,7 +66,7 @@ var products = [
 		lactoseIntolerant: false,
 		nutAllergy: true,
         organic: true,
-		price: 5.00
+		price: 5.00,
 		img: "images/omilk.png",
 	},
 	{
@@ -74,7 +74,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: false,
         organic: false,
-		price: 5.25
+		price: 5.25,
 		img: "images/amilk.png",
 	},
 	{
@@ -82,7 +82,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
-		price: 6.35
+		price: 6.35,
 		img: "images/apples.png",
 	},
   {
@@ -90,7 +90,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: false,
-		price: 7.95
+		price: 7.95,
 	  img: "images/pork.png",
 	},
 	{
@@ -98,7 +98,7 @@ var products = [
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: false,
-		price: 10.00
+		price: 10.00,
 		img: "images/salmon.png",
 	}
 ];
