@@ -1,3 +1,65 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400');
+
+html {
+    background-color:#f8f8ff;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    color: #2E3138;
+}
+
+main,
+footer {
+    width: 60%;
+    margin: auto;
+    margin-top: 24px;
+    justify-content: center;
+}
+
+footer {
+    margin-bottom: 36px;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.825em;
+    color: black;
+    line-height: 1.2;
+    display: block;
+    margin: 12px 0 24px;
+
+    width: 720px;
+    transition: 0.2s;
+}
+
+h2 {
+    font-size: 2.125em;
+    margin: 6px 0 12px;
+}
+
+h3 {
+    font-size: 1.425em;
+    margin: 24px 0;
+}
+
+p {
+  margin: 1em 8px;
+  font-size: 1.215em;
+}
+
+label {
+    font-size: 1.125em;
+}
+
 button {
   cursor: pointer;
   outline: none;
@@ -25,17 +87,181 @@ button.disabled {
   transition: 0.2s;
 }
 
-body { font-family:verdana;
-      font-size:130%;
+textarea,
+input,
+select,
+label {
+    color: #6C6F7D;
 }
 
-h2 { font-style: italic;}
-
-.bantitle {color:blue;
-     -webkit-text-stroke-width: 2px;
-     -webkit-text-stroke-color: black;
+input {
+    margin: 6px 0;
 }
-footer {position: fixed;
-        bottom: 0;
-        right: 1em; 
-        font-style: italic;}
+
+input[type=text] {
+    display: block;
+    width: 320px;
+    padding: 6px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=text],
+textarea,
+select {
+    width: 320px;
+    padding: 6px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type=checkbox]:checked + label { 
+    color: #2E3138; 
+}
+
+.hidden {
+  display: none !important;
+}
+
+.disabled {
+  background-color: #6c6f7d5d;
+  cursor: none;
+}
+
+.cart--item {
+  margin: 12px 0;
+  max-width: 320px;
+  min-height: 1em;
+
+  display: block;
+  position: relative;
+}
+
+.survey--item {
+  margin-left: 12px;
+  padding-left: 18px;
+  border-left: 1px solid #2E3138;
+}
+
+.form--actions {
+  margin: 24px 0 24px 12px;
+}
+
+.product--name {
+  float: left;
+  margin-right: 12px;
+}
+
+.product--price {
+  float: right;
+}
+
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #2E3138;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  font-size: 1em;
+
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: #fff;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(80, 80, 80);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: rgb(90, 90, 90);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.total {
+  max-width: 320px;
+  min-height: 1em;
+  min-height: 4em;
+  font-weight: bold;
+}
+
+p.total--text {
+  display: block;
+  float: left;
+}
+
+p.total--amount {
+  display: block;
+  float: right;
+}
+
+span.signature {
+    margin-top: 48px;
+    color: #6C6F7D;
+}
+
+span.signature > a {
+    text-decoration: none;
+}
+span.signature > a:hover {
+    color: white;
+    background: #232323a9;
+
+    -moz-box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
+    -webkit-box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
+    box-shadow: -3px -2px 1px 0px #2323232e, 1px 0px 0px #2323232e;
+
+    transition: 0.2s;
+}
+
+#displayProduct {
+  margin: 12px 0 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    footer,
+    main {
+        width: 80%;
+    }
+
+    .overlay {
+        width: 320px;
+        left: 0;
+    }
+
+    input[type=submit],
+    input[type=reset],
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+    }
+
+    input[type=submit] {
+        margin: 0;
+    }
