@@ -112,3 +112,19 @@ function selectedItems(){
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts).toFixed(2)));		
 }
+
+//steps of accordian
+function next(step) {
+	// Expand the next accordion.
+	let accordion = document.getElementById(`step-${step}`);
+
+	accordion.classList.remove('disabled');
+	accordion.classList.add('active');
+	accordion.nextElementSibling.classList.remove('hidden');
+
+	resetAccordions(accordion);
+}
+
+window.addEventListener('load', (event) => {
+	populateListProductChoices();
+});
