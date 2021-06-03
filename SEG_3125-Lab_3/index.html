@@ -7,7 +7,7 @@
 	<link href="styles/accordion.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body onload="populateListProductChoices('c1','c2','c3', 'displayProduct')">>
     <main>
 
     <h1>SuperMarket Extreme</h1>
@@ -19,7 +19,7 @@
     <div class="panel hidden">
       <!-- Tab content -->
       <div class="location">
-        <h3>Tell us a bit about you. Please select all diet preferences that apply to you:</h3>
+        <h2>Tell us a bit about you. Please select all diet preferences that apply to you:</h2>
       <div class="survey--item">
        Choose your restrictions:<br><br>
 	<input type="checkbox" id="c1" name="c1" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
@@ -29,6 +29,7 @@
   	<input type="checkbox" id="c3" name="c3" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
   	<label for="c3">Organic only</label><br>
       </div>
+	      </div>
       <div class="form--actions">
         <button onclick="next(2)">Next > </button>
       </div>
