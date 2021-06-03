@@ -70,7 +70,7 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 		var label = document.createElement('label')
 		label.htmlFor = productName;
 		label.value = productName;
-		label.appendChild(document.createTextNode(` ${productName} - $${price.toFixed(2)}`));
+		label.appendChild(document.createTextNode(productName + " - $" + price.toFixed(2)));
 		display.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
@@ -111,5 +111,5 @@ function selectedItems(){
 		
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));		
+	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts).toFixed(2)));		
 }
