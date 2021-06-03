@@ -14,8 +14,9 @@
 <h1 class = "bantitle">SuperMarket Extreme</h1>
 </div>
 
-<button id="step-1" class="accordion">
-  <h3>Client Information</h3>
+<h2 style="color: white; display: inline;">Client Information</h2>
+    </button>
+    <div class="panel hidden">
   <p>Tell us a bit about you. Please select all diet preferences that apply to you:</p>
 	Choose your restrictions:<br><br>
 	<input type="checkbox" id="c1" name="c1" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
@@ -24,11 +25,11 @@
   	<label for="c2">Nut allergy</label><br>
   	<input type="checkbox" id="c3" name="c3" onclick="populateListProductChoices('c1','c2','c3', 'displayProduct')">
   	<label for="c3">Organic only</label><br>
-	<div class="form--actions">
+	</div>
+      <div class="form--actions">
         <button onclick="next(2)">Next > </button>
-  	
-</div>
-</div>
+      </div>
+    </div>
 	
   <button id="step-2"class="accordion disabled">
   <h3>Your targeted products</h3>
@@ -39,21 +40,30 @@
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add selected items to cart.
 	</button>
-	 <div class="form--actions">
-        <button onclick="next(1)">< Previous </button>
+      </div>
+      <div class="form--actions">
+        <button onclick="next(2)">< Previous </button>
         <button onclick="next(3)">Next > </button>
       </div>
-</div>
+    </div>
 
  <button id="step-3" class="accordion disabled">
-  <h3>Shopping Cart</h3>
-  <div id="displayCart">Your cart is currently empty.</div>
-	 <div class="form--actions">
+      <!-- Accordion -->
+      <h2 style="color: white; display: inline;">3. Review your order</h2>
+    </button>
+    <div class="panel hidden">
+      <div id="Cart">
+        <h3>Shopping Cart.</h3>
+        <div id="displayCart">
+          <p>Your cart is currently empty.</p>
+        </div>
+      </div>
+      <div class="form--actions">
         <button onclick="next(2)">< Previous </button>
         <button onclick="submit()">Submit</button>
       </div>
-</div>
-	  
+    </div>
+	    
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
 
