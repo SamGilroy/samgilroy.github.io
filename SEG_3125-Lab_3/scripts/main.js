@@ -21,7 +21,7 @@ function populateListProductChoices() {
 		
 		// Show a picture of the item and add an extra space.
 		var image = document.createElement("img");
-		image.src = products[optionArray[i]].img;
+		image.src = optionArray[i].img;
 		image.alt = productName;
 		display.appendChild(image);
 		
