@@ -14,7 +14,7 @@ h1
 {color:red;
      -webkit-text-stroke-width: 1px;
      -webkit-text-stroke-color: black;
-    justify-content: center;
+    text-align: center;
 }
 
 main,
