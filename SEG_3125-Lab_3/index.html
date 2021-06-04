@@ -19,7 +19,7 @@
 
     <button id="step-1" class="accordion">
       <!-- Accordion -->
-      <h2 style="color: white; display: inline;">1. Tell us a bit about you</h2>
+      <h2 style="color: white; display: inline;">Client Information:</h2>
     </button>
     <div class="panel hidden">
       <!-- Tab content -->
@@ -30,8 +30,6 @@
           <input type="text" id="fname" name="fname">
           <label for="lname">Last name</label>
           <input type="text" id="lname" name="lname">
-          <label for="city">City</label>
-          <input type="text" id="city" name="city">
         </div>
       </div>
       <p>Do you have any dietary restrictions?</p>
@@ -40,15 +38,8 @@
         <label for="lactoseFree">Lactose sensitive</label> <br/>
         <input id="nutFree" type="checkbox" name="dietSelect" value="nutFree" onclick="populateListProductChoices()">
         <label for="nutFree">Nut allergy</label> <br/>
-        <input id="glutenFree" type="checkbox" name="dietSelect" value="glutenFree" onclick="populateListProductChoices()">
-        <label for="glutenFree">Gluten allergy</label> <br/>
         <input id="organic" type="checkbox" name="dietSelect" value="organic" onclick="populateListProductChoices()">
         <label for="organic">Show me organic options.</label><br/>
-      </div>
-      <p>Would you like to see reccommended recipes?</p>
-      <div class="survey--item recipeSelect">
-        <input id="recipe" type="checkbox" name="recipeSelect" value="recipe" onclick="handleRecipeReveal(this.id)">
-        <label for="recipe">Yes, I would like to see recipes.</label> <br/>
       </div>
       <div class="form--actions">
         <button onclick="next(2)">Next > </button>
@@ -57,7 +48,7 @@
 
     <button id="step-2"class="accordion disabled">
       <!-- Accordion -->
-      <h2 style="color: white; display: inline;">2. Explore our products</h2>
+      <h2 style="color: white; display: inline;">Product List:</h2>
     </button>
     <div class="panel hidden">
       <div id="Products">
@@ -76,7 +67,7 @@
 
     <button id="step-3" class="accordion disabled">
       <!-- Accordion -->
-      <h2 style="color: white; display: inline;">3. Review your order</h2>
+      <h2 style="color: white; display: inline;">Review Order:</h2>
     </button>
     <div class="panel hidden">
       <div id="Cart">
