@@ -44,7 +44,7 @@ switch (pref) {
     break;
 }
 	
-populateListProductChoices(pNut,pLac,pOrg, 'displayProduct')
+populateListProductChoices(pLac,pNut,pOrg, 'displayProduct')
 }
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
