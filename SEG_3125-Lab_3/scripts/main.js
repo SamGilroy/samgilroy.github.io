@@ -36,7 +36,7 @@ function populateListProductChoices() {
 		label.appendChild(document.createTextNode(` ${productName} - $${productPrice.toFixed(2)}`));
 		display.appendChild(label);
 		
-		s2.appendChild(document.createElement("br"));
+		display.appendChild(document.createElement("br"));
 		
 		var image = document.createElement("img");
 		image.src = optionArray[option].img;
