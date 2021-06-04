@@ -39,7 +39,7 @@ function populateListProductChoices() {
 		s2.appendChild(document.createElement("br"));
 		
 		var image = document.createElement("img");
-		image.src = products[optionArray[option]].img;
+		image.src = optionArray[option].img;
 		image.alt = productName;
 		display.appendChild(image);
 		
