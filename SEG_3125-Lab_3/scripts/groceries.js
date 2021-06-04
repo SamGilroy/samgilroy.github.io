@@ -46,14 +46,6 @@ var products = [
 		img: "images/1pmilk.png",
 	},
 	{
-		name: "Strawberries",
-		lactoseIntolerant: true,
-		nutAllergy: true,
-        organic: false,
-		price: 4.25,
-		img: "images/strawberries.png",
-	},
-	{
 		name: "Cheese",
 		lactoseIntolerant: false,
 		nutAllergy: true,
