@@ -114,10 +114,6 @@ function selectedItems(){
 	var chosenProducts = [];
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
-	if (ele.length == 0){
-	para.innerHTML = "Your cart is currently empty.";	
-	}
-	else {
 	// build list of selected item
 	var para = document.createElement("P");
 	para.innerHTML = "Your order is the following: ";
@@ -125,7 +121,8 @@ function selectedItems(){
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
-			para.appendChild(" - " +document.createTextNode(ele[i].value));
+			para.appendChild(document.createTextNode(ele[i].value));
+			para.appendChild(getTotalPrice(ele[i]).toFixed(2)));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}
@@ -134,5 +131,4 @@ function selectedItems(){
 	// add paragraph and total price
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts).toFixed(2)));
-	}
 }
