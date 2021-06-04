@@ -1,18 +1,81 @@
+// Global vars indicating diet preferences
+var pNut = false;
+var pLac = false;
+var pOrg = false;
+
+/**
+* This function toggles diet preferences in the sidebar. Text class is changed to
+* indicate selection.
+*/
+function updatePref(pref) {
+
+switch (pref) {
+  case 0:
+    pNut = !pNut;
+    var temp = document.getElementById("nut");
+    if(pNut){
+    temp.className = "selected";
+    }
+    else{
+    temp.className = "selector";
+    }
+    break;
+  case 1:
+    pLac = !pLac;
+    var temp = document.getElementById("lac");    
+    if(pLac){
+    temp.className = "selected";
+    }
+    else{
+    temp.className = "selector";
+    }
+    break;
+  case 2:
+    pOrg = !pOrg;
+    var temp = document.getElementById("org");
+    if(pOrg){
+    temp.className = "selected";
+    }
+    else{
+    temp.className = "selector";
+    }
+    break;
+  default:
+    break;
+}
+
+populateListProductChoices(pNut,pLac,pOrg, 'displayProduct')
+}
+
+// Greens out product entry if we select it, and sets the selection flag.
+function selectItem(item) {
+    if(item.className == "product") {
+     item.className = "productP";
+     products[item.value].selected = true;
+     selectedItems();
+    } 
+    
+    else {
+     item.className = "product";
+     products[item.value].selected = false;
+     selectedItems();
+    }
+}
+
+
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
 function populateListProductChoices(c1,c2,c3, slct2) {
 
-    // Each restriction is placed in array that is sent to the restriction function.
-    var chk1 = document.getElementById(c1);
-    var chk2 = document.getElementById(c2);
-    var chk3 = document.getElementById(c3);
+     var ele = document.getElementsByClassName("productP");
+
+    // Each restriction is placed in array that is sent to the restriction function.    
+    var s1 = [c1, c2, c3];
     
-    var s1 = [chk1.checked, chk2.checked, chk3.checked];
+    // 0 = nut allergy, 1 = lactose intolerant, 2 = only organic products
     
     var s2 = document.getElementById(slct2);
-	
-	// s2 represents the <div> in the Products tab, which shows the product list, so first set it empty	
 	
     s2.innerHTML = "";
 		
