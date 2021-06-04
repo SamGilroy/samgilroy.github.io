@@ -15,14 +15,6 @@
 <h1>~SuperMarket Extreme~</h1>
 </div>
 
-<!-- Tab links, each one with an onclick event associated with it -->
-<div class="dropdown">
-<em id="totCounter" style="float:right;">Total: $0.00</em>
-  <button class="dropbtn" id="dropbtn">Cart (0)</button>
-  <div class="dropdown-content" id="pList">
-  </div>
-  </div>
-
 <div style="position:relative;">
 <!-- Sidebar code taken from https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp-->
   <div id="sidebar" class="sidenav">
@@ -30,6 +22,10 @@
   <p id= "lac" class="selector" onclick="updatePref(0)">Lactose intolerant</p>
   <p id= "nut" class="selector" onclick="updatePref(1)">Nut allergy</p>
   <p id= "org" class="selector" onclick="updatePref(2)">Organic only</p>
+	  <em id="totCounter" style="float:right;">Total: $0.00</em>
+  <button class="dropbtn" id="dropbtn">Cart (0)</button>
+  <div class="dropdown-content" id="pList">
+  </div>
 </div>
 
 <!-- Code for dropdown menu taken from https://www.w3schools.com/howto/howto_css_dropdown.asp -->
