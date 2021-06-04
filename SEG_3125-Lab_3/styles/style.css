@@ -11,18 +11,18 @@ html {
 }
 
 product {
-  border: 1px solid black;
+  border: 1px solid gray;
   text-align:center;
   border-radius: 5px;
-  background-color: white;
+  background-color: pink;
   font-style:bold;
 }
 
 .productP {
-  border: 1px solid black;
+  border: 1px solid gray;
   text-align:center;
   border-radius: 5px;
-  background-color: #90EE90;
+  background-color: #ff944d;
   font-style:bold;
 }
 
@@ -33,7 +33,7 @@ product {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: gray;
   overflow-x: hidden;
   padding-top: 1px;
   display: block;
@@ -64,7 +64,7 @@ color: #818181;
 color: orange;
 }
 .selected:hover {
-  color: #90EE90;
+  color: #ff944d; 
 }
 
 @media screen and (max-height: 450px) {
@@ -112,7 +112,7 @@ footer {position: fixed;
 }
 
 .dropdown-content p {
-  color: black;
+  color: gray;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
