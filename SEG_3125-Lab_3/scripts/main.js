@@ -32,9 +32,9 @@ function populateListProductChoices() {
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName + " - $" + productPrice));
+		label.appendChild(document.createTextNode(productName + " - $" + productPrice.toFixed(2)));
 		display.appendChild(label);
-		display.appendChild(document.createElement("br"));  
+		display.appendChild(document.createElement("br"));  	
 	}
 }
 
