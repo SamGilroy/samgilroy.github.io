@@ -1,6 +1,6 @@
 // Global vars indicating diet preferences
-var pNut = false;
 var pLac = false;
+var pNut = false;
 var pOrg = false;
 
 /**
@@ -11,9 +11,9 @@ function updatePref(pref) {
 
 switch (pref) {
   case 0:
-    pNut = !pNut;
-    var temp = document.getElementById("nut");
-    if(pNut){
+    pLac = !pLac;
+    var temp = document.getElementById("lac");
+    if(pLac){
     temp.className = "selected";
     }
     else{
@@ -21,9 +21,9 @@ switch (pref) {
     }
     break;
   case 1:
-    pLac = !pLac;
-    var temp = document.getElementById("lac");    
-    if(pLac){
+    pNut= !pNut;
+    var temp = document.getElementById("nut");    
+    if(pNut){
     temp.className = "selected";
     }
     else{
@@ -44,7 +44,7 @@ switch (pref) {
     break;
 }
 
-populateListProductChoices(pNut,pLac,pOrg, 'displayProduct')
+populateListProductChoices(pLac,pNut,pOrg, 'displayProduct')
 }
 
 // Greens out product entry if we select it, and sets the selection flag.
