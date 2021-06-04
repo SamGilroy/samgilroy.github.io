@@ -94,43 +94,42 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 	// <label for="Bread">Bread/label><br>
 		
 	for (i = 0; i < optionArray.length; i++) {
+	
+	        // Product attributes are now wrapped in a div element for styling purposes.
+		let newDiv = document.createElement('div');
+		
 		/* We keep track of items that have been selected, regardless of if they're displayed. */
 		if(products[optionArray[i]].selected) {
-		    s2.className = "productP";
+		    newDiv.className = "productP";
 		}
 		
 		else {
-		    s2.className = "product";
+		    newDiv.className = "product";
 		}
 		
-		s2.setAttribute("onclick","selectItem(this);");
-			
+		newDiv.setAttribute("onclick","selectItem(this);");
 		var productName = products[optionArray[i]].name;
-		var price = products[optionArray[i]].price;
-		// create the checkbox and add in HTML DOM
-		var checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = "product";
-		checkbox.value = productName;
-		s2.appendChild(checkbox);
-		s2.value = pIndex;
-		
-		// create a label for the checkbox, and also add in HTML DOM
-		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName + " -$" + price.toFixed(2)));
-		s2.appendChild(label);
+		var pIndex = optionArray[i];
+		var pricey = products[optionArray[i]].price;
+
+		newDiv.value = pIndex; // Value now based on DB index.
+
+               //Header for product card.
+		newDiv.appendChild(document.createTextNode(productName + " - $" + pricey));
+
 		
 		// create a breakline node and add in HTML DOM
-		s2.appendChild(document.createElement("br"));
+		newDiv.appendChild(document.createElement("br"));
 		
 		// Show a picture of the item and add an extra space.
 		var image = document.createElement("img");
 		image.src = products[optionArray[i]].img;
 		image.alt = productName;
-		s2.appendChild(image);
-		
-		s2.appendChild(document.createElement("br"));
+		newDiv.appendChild(image);
+	
+		// Add product card and prepare for next one.
+		newDiv.appendChild(document.createElement("br"));		
+		s2.appendChild(newDiv);
 		s2.appendChild(document.createElement("br"));
 	}
 }
