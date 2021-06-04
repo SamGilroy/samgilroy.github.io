@@ -29,7 +29,12 @@ function populateListProductChoices() {
 		checkbox.id = productName
 		display.appendChild(checkbox);
 
-		
+		// create a label for the checkbox, and also add in HTML DOM
+		var label = document.createElement('label')
+		label.htmlFor = productName;
+		label.value = productName;
+		label.appendChild(document.createTextNode(` ${productName} - $${productPrice.toFixed(2)}`));
+		display.appendChild(label);
 		
 		var image = document.createElement("img");
 		image.src = optionArray[option].img;
