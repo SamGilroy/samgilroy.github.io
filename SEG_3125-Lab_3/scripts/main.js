@@ -17,7 +17,7 @@ function populateListProductChoices() {
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, restrictions);
 
-	for (option in optionArray) {
+	for (i = 0; i < optionArray.length; i++) {
 
 		 
 		
