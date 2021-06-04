@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="styles/accordion.css" rel="stylesheet" type="text/css">
+
+  <script src="scripts/groceries.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/recipes.js"></script>
+  <script src="scripts/accordion.js"></script>
+
+  <title>SuperMarket Extreme</title>
+</head>
+
+  <body>
+    <main>
+
+    <h1>SuperMarket Extreme</h1>
+
+    <button id="step-1" class="accordion">
+      <!-- Accordion -->
+      <h2 style="color: white; display: inline;">1. Tell us a bit about you</h2>
+    </button>
+    <div class="panel hidden">
+      <!-- Tab content -->
+      <div class="location">
+        <h3>Your information.</h3>
+        <div class="survey--item">
+          <label for="fname">First name</label>
+          <input type="text" id="fname" name="fname">
+          <label for="lname">Last name</label>
+          <input type="text" id="lname" name="lname">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city">
+        </div>
+      </div>
+      <p>Do you have any dietary restrictions?</p>
+      <div class="survey--item">
+        <input id="lactoseFree" type="checkbox" name="dietSelect" value="lactoseFree" onclick="populateListProductChoices()">
+        <label for="lactoseFree">Lactose sensitive</label> <br/>
+        <input id="nutFree" type="checkbox" name="dietSelect" value="nutFree" onclick="populateListProductChoices()">
+        <label for="nutFree">Nut allergy</label> <br/>
+        <input id="glutenFree" type="checkbox" name="dietSelect" value="glutenFree" onclick="populateListProductChoices()">
+        <label for="glutenFree">Gluten allergy</label> <br/>
+        <input id="organic" type="checkbox" name="dietSelect" value="organic" onclick="populateListProductChoices()">
+        <label for="organic">Show me organic options.</label><br/>
+      </div>
+      <p>Would you like to see reccommended recipes?</p>
+      <div class="survey--item recipeSelect">
+        <input id="recipe" type="checkbox" name="recipeSelect" value="recipe" onclick="handleRecipeReveal(this.id)">
+        <label for="recipe">Yes, I would like to see recipes.</label> <br/>
+      </div>
+      <div class="form--actions">
+        <button onclick="next(2)">Next > </button>
+      </div>
+    </div>
+
+    <button id="step-2"class="accordion disabled">
+      <!-- Accordion -->
+      <h2 style="color: white; display: inline;">2. Explore our products</h2>
+    </button>
+    <div class="panel hidden">
+      <div id="Products">
+        <h2>Your targeted products.</h2>
+        <p>We preselected products based on your restrictions.</p>
+        <p>Choose items to buy:</p>
+        <div id="displayProduct">
+          <p>Nothing here yet!</p>
+        </div>
+      </div>
+      <div class="form--actions">
+        <button onclick="next(1)">< Previous </button>
+        <button onclick="next(3)">Next > </button>
+      </div>
+    </div>
+
+    <button id="step-3" class="accordion disabled">
+      <!-- Accordion -->
+      <h2 style="color: white; display: inline;">3. Review your order</h2>
+    </button>
+    <div class="panel hidden">
+      <div id="Cart">
+        <h3>Your cart.</h3>
+        <div id="displayCart">
+          <p>Nothing here yet!</p>
+        </div>
+      </div>
+      <div class="form--actions">
+        <button onclick="next(2)">< Previous </button>
+        <button onclick="submit()">Submit</button>
+      </div>
+    </div>
+  </main>
+    <footer>
+      <span class="signature">
+        Website designed by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Benjamin Dover<a/>
+      </span>
+    </footer>
+  </body>
+</html>
