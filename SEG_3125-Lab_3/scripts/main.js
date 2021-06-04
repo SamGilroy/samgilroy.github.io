@@ -19,16 +19,33 @@ function populateListProductChoices() {
 
 	for (option in optionArray) {
 
+		var productName = optionArray[option].name;
+		var productPrice = optionArray[option].price;
+		// create the checkbox and add in HTML DOM
+		var checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.name = "product";
+		checkbox.value = productName;
+		checkbox.id = productName
+		display.appendChild(checkbox);
+
+		// create a label for the checkbox, and also add in HTML DOM
+		var label = document.createElement('label')
+		label.htmlFor = productName;
+		label.appendChild(document.createTextNode(productName + " -$ " + productPrice));
+		display.appendChild(label);
 		
+		// create a breakline node and add in HTML DOM
+		display.appendChild(document.createElement("br"));
 		
-		
+		// Show a picture of the item and add an extra space.
 		var image = document.createElement("img");
-		image.src = products[optionArray[option]].img;
+		image.src = products[optionArray[i]].img;
 		image.alt = productName;
 		display.appendChild(image);
 		
 		display.appendChild(document.createElement("br"));
-		display.appendChild(document.createElement("br"));    
+		display.appendChild(document.createElement("br"));  
 	}
 }
 
