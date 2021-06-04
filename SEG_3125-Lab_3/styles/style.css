@@ -17,30 +17,6 @@ h1
     text-align: center;
 }
 
-/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
-
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-/* Style the buttons that are used to open the tab content */
-
-/* Change background color of buttons on hover */
-
-
-/* Create an active/current tablink class */
-
-/* Style the tab content */
-.tabcontent {
-  display: block;
-  padding: 6px 12px;
-  position:absolute;
-  top:0px;
-}
-
 .product {
   border: 1px solid black;
   text-align:center;
@@ -80,7 +56,7 @@ h1
 }
 
 .sidenav h5 {
-  color: #818181;
+  color: #cc66ff;
   padding: 0px 0px 0px 16px;
 }
 
@@ -118,16 +94,13 @@ footer {position: fixed;
         right: 1em; 
         font-style: italic;}
         
-.banner { width:100%;
-	  background-image:url(images/banner.jpeg);
-}
-
 .dropbtn {
-  background-color: #04AA6D;
+  background-color: #ff0000;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
+position: right;
 }
 
 .dropdown {
