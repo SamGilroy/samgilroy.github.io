@@ -10,13 +10,6 @@ html {
     color: #2E3138;
 }
 
-h1
-{color:red;
-     -webkit-text-stroke-width: 1px;
-     -webkit-text-stroke-color: black;
-    text-align: left;
-}
-
 .product {
   border: 1px solid black;
   text-align:center;
