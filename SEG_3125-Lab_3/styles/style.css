@@ -88,6 +88,7 @@ h2 { font-style: italic;}
 .bantitle { color:red;
      -webkit-text-stroke-width: 2px;
      -webkit-text-stroke-color: black;
+    text-align: center;
 }
 footer {position: fixed;
         bottom: 0;
