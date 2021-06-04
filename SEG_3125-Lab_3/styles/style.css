@@ -23,7 +23,11 @@ footer {
     margin-bottom: 36px;
 }
 
-h1,
+h1
+{color:blue;
+     -webkit-text-stroke-width: 2px;
+     -webkit-text-stroke-color: black;
+}
 h2 {
     font-weight: 400;
 }
