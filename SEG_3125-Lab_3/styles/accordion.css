@@ -1,5 +1,5 @@
 .accordion {
-    color: #993399;
+    color: #444;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -16,14 +16,14 @@ button.accordion {
   .accordion:after {
     font-size: 2.125em;
     content: '\002B';
-    color: #990099;
+    color: #fff;
     font-weight: bold;
     float: right;
     margin-left: 5px;
   }
 
   .accordion.active {
-    background-color: #990099;
+    background-color: #2E3138;
   }
   
   .active:after {
@@ -40,7 +40,7 @@ button.accordion {
   }
 
   .disabled {
-    background-color: #660066;
+    background-color: #2e313862;
     cursor: unset;
   }
 
