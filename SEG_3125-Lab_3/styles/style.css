@@ -27,8 +27,21 @@ footer {
 footer {
     margin-bottom: 36px;
 }
+
+h1,
 h2 {
     font-weight: 400;
+}
+
+h1 {
+    font-size: 2.825em;
+    color: black;
+    line-height: 1.2;
+    display: block;
+    margin: 12px 0 24px;
+
+    width: 720px;
+    transition: 0.2s;
 }
 
 h2 {
@@ -60,7 +73,7 @@ button {
   border: none;
 
   color: white;
-  background-color: #993399;
+  background-color: #2E3138;
 
   transition: 0.2s;
   min-width: 120px;
@@ -68,12 +81,12 @@ button {
 
 button:hover,
 button:focus {
-    background-color: #cc00cc; 
+    background-color: #2e3138ad; 
     transition: 0.2s;
 }
 
 button.disabled {
-  background-color: #cc00cc;
+  background-color: #2e3138ad;
   transition: 0.2s;
 }
 
@@ -120,7 +133,7 @@ input[type=checkbox]:checked + label {
 }
 
 .disabled {
-  background-color: #660066;
+  background-color: #6c6f7d5d;
   cursor: none;
 }
 
@@ -167,6 +180,25 @@ p.total--text {
 p.total--amount {
   display: block;
   float: right;
+}
+
+span.signature {
+    margin-top: 48px;
+    color: #6C6F7D;
+}
+
+span.signature > a {
+    text-decoration: none;
+}
+span.signature > a:hover {
+    color: white;
+    background: #232323a9;
+
+    -moz-box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
+    -webkit-box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
+    box-shadow: -3px -2px 1px 0px #2323232e, 1px 0px 0px #2323232e;
+
+    transition: 0.2s;
 }
 
 #displayProduct {
