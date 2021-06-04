@@ -122,7 +122,7 @@ function selectedItems(){
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
-			para.appendChild(getTotalPrice(ele[i]).toFixed(2)));
+			para.appendChild(document.createElement("br"));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}
