@@ -88,6 +88,14 @@ for (i = 0; i < optionArray.length; i++) {
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName + " - $" + price.toFixed(2)));
 		s2.appendChild(label);
+		// create a breakline node and add in HTML DOM
+		s2.appendChild(document.createElement("br"));
+		
+		// Show a picture of the item and add an extra space.
+		var image = document.createElement("img");
+		image.src = products[optionArray[i]].img;
+		image.alt = productName;
+		s2.appendChild(image);
 		
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));
