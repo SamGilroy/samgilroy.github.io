@@ -90,7 +90,15 @@ footer {position: fixed;
 .dropbtn {
   background-color: #ff0000;
   color: white;
-  padding: 16px;
+  padding-right: 20%;
+  font-size: 16px;
+  border: none;
+}
+
+.addCart {
+  background-color: #00cc00;
+  color: white;
+  padding: 20%;
   font-size: 16px;
   border: none;
 }
