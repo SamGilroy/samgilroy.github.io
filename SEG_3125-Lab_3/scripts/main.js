@@ -43,6 +43,9 @@ switch (pref) {
   default:
     break;
 }
+	
+populateListProductChoices(pNut,pLac,pOrg, 'displayProduct')
+}
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
