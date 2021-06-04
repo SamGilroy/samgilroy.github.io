@@ -96,7 +96,8 @@ for (i = 0; i < optionArray.length; i++) {
 		s2.appendChild(image);
 		
 		s2.appendChild(document.createElement("br"));
-		s2.appendChild(document.createElement("br"));     
+		s2.appendChild(document.createElement("br"));   
+		selectedItems();
 	}
 }
 	
