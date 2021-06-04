@@ -32,11 +32,8 @@ function populateListProductChoices() {
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName + " -$ " + productPrice));
+		label.appendChild(document.createTextNode(productName + " - $" + productPrice));
 		display.appendChild(label);
-		
-		// create a breakline node and add in HTML DOM
-		display.appendChild(document.createElement("br"));
 		
 		// Show a picture of the item and add an extra space.
 		var image = document.createElement("img");
