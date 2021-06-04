@@ -36,15 +36,6 @@ function populateListProductChoices() {
 		label.appendChild(document.createTextNode(` ${productName} - $${productPrice.toFixed(2)}`));
 		display.appendChild(label);
 		
-		// create a breakline node and add in HTML DOM
-		display.appendChild(document.createElement("br"));
-		
-		// Show a picture of the item and add an extra space.
-		var image = document.createElement("img");
-		image.src = products[optionArray[i]].img;
-		image.alt = productName;
-		display.appendChild(image);
-		
 		display.appendChild(document.createElement("br"));
 		display.appendChild(document.createElement("br"));    
 	}
