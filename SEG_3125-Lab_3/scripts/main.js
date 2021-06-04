@@ -19,24 +19,8 @@ function populateListProductChoices() {
 
 	for (option in optionArray) {
 
-		var productName = optionArray[option].name;
-		var productPrice = optionArray[option].price;
-		// create the checkbox and add in HTML DOM
-		var checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = "product";
-		checkbox.value = productName;
-		checkbox.id = productName
-		display.appendChild(checkbox);
-
-		// create a label for the checkbox, and also add in HTML DOM
-		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.value = productName;
-		label.appendChild(document.createTextNode(` ${productName} - $${productPrice.toFixed(2)}`));
-		display.appendChild(label);
 		
-		display.appendChild(document.createElement("br"));
+		
 		
 		var image = document.createElement("img");
 		image.src = products[optionArray[option]].img;
