@@ -94,6 +94,16 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 	// <label for="Bread">Bread/label><br>
 		
 	for (i = 0; i < optionArray.length; i++) {
+		/* We keep track of items that have been selected, regardless of if they're displayed. */
+		if(products[optionArray[i]].selected) {
+		    s2.className = "productP";
+		}
+		
+		else {
+		    s2.className = "product";
+		}
+		
+		s2.setAttribute("onclick","selectItem(this);");
 			
 		var productName = products[optionArray[i]].name;
 		var price = products[optionArray[i]].price;
@@ -103,6 +113,7 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 		checkbox.name = "product";
 		checkbox.value = productName;
 		s2.appendChild(checkbox);
+		s2.value = pIndex;
 		
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
