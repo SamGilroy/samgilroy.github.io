@@ -34,12 +34,6 @@ function populateListProductChoices() {
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName + " - $" + productPrice));
 		display.appendChild(label);
-		
-		// Show a picture of the item and add an extra space.
-		var image = document.createElement("img");
-		image.src = products[optionArray[option]].img;
-		image.alt = productName;
-		display.appendChild(image);
 		display.appendChild(document.createElement("br"));  
 	}
 }
