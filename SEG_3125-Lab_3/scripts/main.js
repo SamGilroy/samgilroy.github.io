@@ -91,42 +91,32 @@ function populateListProductChoices(c1,c2,c3, slct2) {
 
 for (i = 0; i < optionArray.length; i++) {
 	
-	        // Product attributes are now wrapped in a div element for styling purposes.
-		let newDiv = document.createElement('div');
-		
-		/* We keep track of items that have been selected, regardless of if they're displayed. */
-		if(products[optionArray[i]].selected) {
-		    newDiv.className = "productP";
-		}
-		
-		else {
-		    newDiv.className = "product";
-		}
-		
-		newDiv.setAttribute("onclick","selectItem(this);");
-		var productName = products[optionArray[i]].name;
-		var pIndex = optionArray[i];
+	   var productName = products[optionArray[i]].name;
 		var price = products[optionArray[i]].price;
-
-		newDiv.value = pIndex; // Value now based on DB index.
-
-               //Header for product card.
-		newDiv.appendChild(document.createTextNode(productName + " - $" + price.toFixed(2)));
-
+		// create the checkbox and add in HTML DOM
+		var checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.name = "product";
+		checkbox.value = productName;
+		s2.appendChild(checkbox);
+		
+		// create a label for the checkbox, and also add in HTML DOM
+		var label = document.createElement('label')
+		label.htmlFor = productName;
+		label.appendChild(document.createTextNode(productName + " -$" + price.toFixed(2)));
+		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM
-		newDiv.appendChild(document.createElement("br"));
+		s2.appendChild(document.createElement("br"));
 		
 		// Show a picture of the item and add an extra space.
 		var image = document.createElement("img");
 		image.src = products[optionArray[i]].img;
 		image.alt = productName;
-		newDiv.appendChild(image);
-	
-		// Add product card and prepare for next one.
-		newDiv.appendChild(document.createElement("br"));		
-		s2.appendChild(newDiv);
+		s2.appendChild(image);
+		
 		s2.appendChild(document.createElement("br"));
+		s2.appendChild(document.createElement("br"));     
 	}
 }
 	
