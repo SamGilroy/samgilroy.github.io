@@ -105,7 +105,7 @@ for (i = 0; i < optionArray.length; i++) {
 // We build a paragraph to contain the list of selected items, and the total price
 
 function selectedItems(){
-	
+	var price = products[optionArray[i]].price;
 	var ele = document.getElementsByName("product");
 	var chosenProducts = [];
 	
@@ -120,6 +120,7 @@ function selectedItems(){
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
+			para.appendChild(price));
 			para.appendChild(document.createElement("br"));
 			chosenProducts.push(ele[i].value);
 		}
