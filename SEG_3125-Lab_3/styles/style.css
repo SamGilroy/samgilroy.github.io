@@ -16,3 +16,159 @@ h1
      -webkit-text-stroke-color: black;
 }
 
+main,
+footer {
+    width: 60%;
+    margin: auto;
+    margin-top: 24px;
+    justify-content: center;
+}
+
+footer {
+    margin-bottom: 36px;
+}
+h2 {
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2.125em;
+    margin: 6px 0 12px;
+}
+
+h3 {
+    font-size: 1.425em;
+    margin: 24px 0;
+}
+
+p {
+  margin: 1em 8px;
+  font-size: 1.215em;
+}
+
+label {
+    font-size: 1.125em;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+
+  padding: 12px;
+
+  border-radius: 6px;
+  border: none;
+
+  color: white;
+  background-color: #993399;
+
+  transition: 0.2s;
+  min-width: 120px;
+}
+
+button:hover,
+button:focus {
+    background-color: #cc00cc; 
+    transition: 0.2s;
+}
+
+button.disabled {
+  background-color: #cc00cc;
+  transition: 0.2s;
+}
+
+textarea,
+input,
+select,
+label {
+    color: #6C6F7D;
+}
+
+input {
+    margin: 6px 0;
+}
+
+input[type=text] {
+    display: block;
+    width: 320px;
+    padding: 6px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=text],
+textarea,
+select {
+    width: 320px;
+    padding: 6px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type=checkbox]:checked + label { 
+    color: #2E3138; 
+}
+
+.hidden {
+  display: none !important;
+}
+
+.disabled {
+  background-color: #660066;
+  cursor: none;
+}
+
+.cart--item {
+  margin: 12px 0;
+  max-width: 320px;
+  min-height: 1em;
+
+  display: block;
+  position: relative;
+}
+
+.survey--item {
+  margin-left: 12px;
+  padding-left: 18px;
+  border-left: 1px solid #2E3138;
+}
+
+.form--actions {
+  margin: 24px 0 24px 12px;
+}
+
+.product--name {
+  float: left;
+  margin-right: 12px;
+}
+
+.product--price {
+  float: right;
+}
+
+.total {
+  max-width: 320px;
+  min-height: 1em;
+  min-height: 4em;
+  font-weight: bold;
+}
+
+p.total--text {
+  display: block;
+  float: left;
+}
+
+p.total--amount {
+  display: block;
+  float: right;
+}
+
+#displayProduct {
+  margin: 12px 0 24px;
+}
