@@ -12,7 +12,7 @@ html {
 
 h1
 {color:red;
-     -webkit-text-stroke-width: 2px;
+     -webkit-text-stroke-width: 5px;
      -webkit-text-stroke-color: black;
 }
 
@@ -20,12 +20,12 @@ main,
 footer {
     width: 60%;
     margin: auto;
-    margin-top: 24px;
+    margin-top: 25px;
     justify-content: center;
 }
 
 footer {
-    margin-bottom: 36px;
+    margin-bottom: 35px;
 }
 
 h1,
@@ -34,49 +34,49 @@ h2 {
 }
 
 h2 {
-    font-size: 2.125em;
-    margin: 6px 0 12px;
+    font-size: 2.25em;
+    margin: 5px 0 10px;
 }
 
 h3 {
-    font-size: 1.425em;
-    margin: 24px 0;
+    font-size: 1.5em;
+    margin: 25px 0;
 }
 
 p {
-  margin: 1em 8px;
-  font-size: 1.215em;
+  margin: 1em 10px;
+  font-size: 1.25em;
 }
 
 label {
-    font-size: 1.125em;
+    font-size: 1.25em;
 }
 
 button {
   cursor: pointer;
   outline: none;
 
-  padding: 12px;
+  padding: 10px;
 
-  border-radius: 6px;
+  border-radius: 5px;
   border: none;
 
   color: gray;
   background-color: #2E3138;
 
-  transition: 0.2s;
-  min-width: 120px;
+  transition: 0.25s;
+  min-width: 100px;
 }
 
 button:hover,
 button:focus {
     background-color: #2e3138ad; 
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 button.disabled {
   background-color: #2e3138ad;
-  transition: 0.2s;
+  transition: 0.25s;
 }
 
 textarea,
@@ -87,13 +87,13 @@ label {
 }
 
 input {
-    margin: 6px 0;
+    margin: 5px 0;
 }
 
 input[type=text] {
     display: block;
-    width: 320px;
-    padding: 6px;
+    width: 325px;
+    padding: 5px;
 }
 
 select {
@@ -105,8 +105,8 @@ select {
 input[type=text],
 textarea,
 select {
-    width: 320px;
-    padding: 6px;
+    width: 325px;
+    padding: 5px;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -127,8 +127,8 @@ input[type=checkbox]:checked + label {
 }
 
 .cart--item {
-  margin: 12px 0;
-  max-width: 320px;
+  margin: 10px 0;
+  max-width: 325px;
   min-height: 1em;
 
   display: block;
@@ -136,18 +136,18 @@ input[type=checkbox]:checked + label {
 }
 
 .survey--item {
-  margin-left: 12px;
-  padding-left: 18px;
+  margin-left: 10px;
+  padding-left: 20px;
   border-left: 1px solid #2E3138;
 }
 
 .form--actions {
-  margin: 24px 0 24px 12px;
+  margin: 25px 0 25px 10px;
 }
 
 .product--name {
   float: left;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 .product--price {
@@ -155,9 +155,9 @@ input[type=checkbox]:checked + label {
 }
 
 .total {
-  max-width: 320px;
+  max-width: 325px;
   min-height: 1em;
-  min-height: 4em;
+  min-height: 5em;
   font-weight: bold;
 }
 
@@ -172,7 +172,7 @@ p.total--amount {
 }
 
 span.signature {
-    margin-top: 48px;
+    margin-top: 50px;
     color: #ff3399;
 }
 
@@ -187,11 +187,11 @@ span.signature > a:hover {
     -webkit-box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
     box-shadow: -3px -2px 1px 0px #2323232e, 1px 0px 0px #2323232e;
 
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 #displayProduct {
-  margin: 12px 0 24px;
+  margin: 10px 0 25px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -201,7 +201,7 @@ span.signature > a:hover {
     }
 
     .overlay {
-        width: 320px;
+        width: 325px;
         left: 0;
     }
 
