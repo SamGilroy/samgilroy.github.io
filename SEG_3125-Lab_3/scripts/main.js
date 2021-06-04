@@ -106,12 +106,12 @@ for (i = 0; i < optionArray.length; i++) {
 		newDiv.setAttribute("onclick","selectItem(this);");
 		var productName = products[optionArray[i]].name;
 		var pIndex = optionArray[i];
-		var pricey = products[optionArray[i]].price;
+		var price = products[optionArray[i]].price;
 
 		newDiv.value = pIndex; // Value now based on DB index.
 
                //Header for product card.
-		newDiv.appendChild(document.createTextNode(productName + " - $" + pricey));
+		newDiv.appendChild(document.createTextNode(productName + " - $" + price.toFixed(2)));
 
 		
 		// create a breakline node and add in HTML DOM
