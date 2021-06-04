@@ -106,19 +106,40 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
-	let product_list = [];
-	for (let i=0; i<prods.length; i+=1) {
+function restrictListProducts(products, restrictions) {
+	let product_names = [];
 
-		if (!(restriction[2] & (restriction[2] ^ prods[i].organic) | restriction[1] & (restriction[1] ^ prods[i].nutAllergy) | restriction[0] & (restriction[0] ^ prods[i].lactoseIntolerant))){
-			product_list.push(i);
-		}				
+	for (var index in products) {
+		let product = products[index];
+		if (restrictions.length == 0) {
+			product_names.push({
+				name: product.name, 
+				price: product.price
+			});
+		} else {
+			var allowed = true;
+			for (let rindex in restrictions) {
+				let restriction = restrictions[rindex];
+				allowed = allowed && product[restriction];
+			}
+
+			if (allowed)
+				product_names.push({
+					name: product.name, 
+					price: product.price
+				});
+		}
 	}
-	
-	return product_list;
+
+	return product_names;
 }
 
-// Calculate the total price of items, with received parameter being a list of products
+/**
+ * Calculate the total price of items, with received parameter being a list of products.
+ *
+ * @param {*} chosenProducts 
+ * @returns 
+ */
 function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
 	for (let i=0; i<products.length; i+=1) {
@@ -126,7 +147,5 @@ function getTotalPrice(chosenProducts) {
 			totalPrice += products[i].price;
 		}
 	}
-	
-	//Rounds output to 2 decimal places
-	return Math.round(totalPrice * 100) / 100;
+	return totalPrice.toFixed(2);
 }
