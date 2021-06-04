@@ -117,37 +117,14 @@ function restrictListProducts(prods, restriction) {
 	return product_list;
 }
 
-// Calculate the total price of items, with received parameter being a list of products
-function getTotalPrice() {
-
-        // Get cart element, then clear it in preparation to add new nodes.
-        var c = document.getElementById('pList');
-        var d = document.getElementById('dropbtn');
-        
-        while (c.firstChild) {
-        c.removeChild(c.firstChild);
-        }
-        var counter = 0;
-        
+function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
-	
-	/* Changed logic to point to attribute in the product DB to indicate selection.
-	Normally this is bad practice, but it doesn't really matter here. */
 	for (let i=0; i<products.length; i+=1) {
-		if (products[i].selected){
+		if (chosenProducts.indexOf(products[i].name) > -1){
 			totalPrice += products[i].price;
-			counter++;
-			var para = document.createElement("P");
-	               para.innerHTML = products[i].name;
-	               c.appendChild(para);
 		}
 	}
 	
-	// Format string for cart button indicating number of items
-	d.innerHTML = "Cart (" + counter + ")";
-	
-	//Rounds output to 2 decimal places	
-	if(totalPrice == 0){return "0.00";}
-	else{return Math.round(totalPrice * 100) / 100;}
-	
+	//Rounds output to 2 decimal places
+	return Math.round(totalPrice * 100) / 100;
 }
