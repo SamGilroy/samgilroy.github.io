@@ -43,26 +43,6 @@ switch (pref) {
   default:
     break;
 }
-
-populateListProductChoices(pLac,pNut,pOrg, 'displayProduct')
-}
-
-// Greens out product entry if we select it, and sets the selection flag.
-function selectItem(item) {
-    if(item.className == "product") {
-     item.className = "productP";
-     products[item.value].selected = true;
-     selectedItems();
-    } 
-    
-    else {
-     item.className = "product";
-     products[item.value].selected = false;
-     selectedItems();
-    }
-}
-
-
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
