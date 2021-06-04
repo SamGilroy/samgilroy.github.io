@@ -18,10 +18,6 @@ function populateListProductChoices() {
     var optionArray = restrictListProducts(products, restrictions);
 
 	for (i = 0; i < optionArray.length; i++) {
-
-		 
-		
-		display.appendChild(document.createElement("br"));
 		
 		// Show a picture of the item and add an extra space.
 		var image = document.createElement("img");
