@@ -40,8 +40,6 @@ function populateListProductChoices() {
 		image.src = products[optionArray[option]].img;
 		image.alt = productName;
 		display.appendChild(image);
-		
-		display.appendChild(document.createElement("br"));
 		display.appendChild(document.createElement("br"));  
 	}
 }
