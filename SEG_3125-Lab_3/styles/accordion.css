@@ -9,4 +9,39 @@
     transition: 0.4s;
   }
 
+button.accordion {
+      padding-bottom: 72px;
+  }
+  
+  .accordion:after {
+    font-size: 2.125em;
+    content: '\002B';
+    color: #990099;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .accordion.active {
+    background-color: #990099;
+  }
+  
+  .active:after {
+    content: "\2212";
+    font-size: 2.125em;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    border: 1px solid blue;
+    border-top: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .disabled {
+    background-color: #660066;
+    cursor: unset;
+  }
+
   
