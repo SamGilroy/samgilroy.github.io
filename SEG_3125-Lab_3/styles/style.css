@@ -172,3 +172,27 @@ p.total--amount {
 #displayProduct {
   margin: 12px 0 24px;
 }
+
+@media only screen and (max-width: 768px) {
+    footer,
+    main {
+        width: 80%;
+    }
+
+    .overlay {
+        width: 320px;
+        left: 0;
+    }
+
+    input[type=submit],
+    input[type=reset],
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+    }
+
+    input[type=submit] {
+        margin: 0;
+    }
+}
