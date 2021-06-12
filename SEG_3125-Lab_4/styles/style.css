@@ -12,4 +12,6 @@ p{
 footer {position: fixed;
         bottom: 0;
         right: 1em; 
-        font-style: italic;}
+        font-style: italic;
+        font-color: magenta;
+}
