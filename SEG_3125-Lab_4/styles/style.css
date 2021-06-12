@@ -9,9 +9,3 @@ p{
     margin-bottom: 10px;
 }
 
-footer {position: fixed;
-        bottom: 0;
-        right: 1em; 
-        font-style: italic;
-        font-color: magenta;
-}
