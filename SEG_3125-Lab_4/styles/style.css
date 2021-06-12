@@ -8,3 +8,8 @@ p{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+footer {position: fixed;
+        bottom: 0;
+        right: 1em; 
+        font-style: italic;}
