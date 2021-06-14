@@ -20,7 +20,7 @@ function validateEmail(email) {
     }
 }
 
-function validateCCNumber(cardNum) {
+function validateCC(cardNum) {
 
   var ccNum = document.getElementById(cardNum).value;
   var visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
@@ -87,7 +87,7 @@ $(document).ready(function(){
     });
     
     $("#cardNum").on("change", function(){
-        if (!validateCCNumber("cardNum")){
+        if (!validateCC("cardNum")){
             alert("Please use the proper format.");
             $("#cardNum").val("");
             $("#cardNum").addClass("error");
