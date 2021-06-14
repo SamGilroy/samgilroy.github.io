@@ -33,7 +33,7 @@ function validateCC(cardNum) {
 }
 
 function validateFirst(firstName) {
-var regName = /^[a-zA-Z]$/;
+var regName = /^[a-zA-Z]{2,}$/;
 var name = document.getElementById(firstName).value;
     if (regName.test(name)) {
         return true;
@@ -44,7 +44,7 @@ var name = document.getElementById(firstName).value;
 }
 
 function validateLast(lastName) {
-var regName = /^[a-zA-Z]$/;
+var regName = /^[a-zA-Z]{2,}$/;
 var name = document.getElementById(lastName).value;
   
     if (regName.test(name)) {
