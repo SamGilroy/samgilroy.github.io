@@ -10,9 +10,9 @@ function validatePhone(txtPhone) {
 }
 
 function validateEmail(email) {
-    var a = document.getElementById(email).value;
+    var b = document.getElementById(email).value;
     var re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    if (re.test(a)) {
+    if (re.test(b)) {
         return true;
     }
     else {
@@ -43,16 +43,7 @@ $(document).ready(function(){
     // and also some feedback as an Alert + putting a value in the input that shows the format required
     // the "addClass" will use the class "error" defined in style.css and add it to the phone input
     // The "error" class in style.css defines yellow background and red foreground
-    $("#email").on("change", function(){
-        if (!validateEmail("email")){
-            alert("e");
-            $("#email").val("");
-            $("#email").addClass("error");
-        }
-        else {
-            $("#email").removeClass("error");
-        }
-    });
+    
 
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
@@ -62,6 +53,17 @@ $(document).ready(function(){
         }
         else {
             $("#phone").removeClass("error");
+        }
+    });
+    
+    $("#email").on("change", function(){
+        if (!validateEmail("email")){
+            alert("e");
+            $("#email").val("");
+            $("#email").addClass("error");
+        }
+        else {
+            $("#email").removeClass("error");
         }
     });
     
