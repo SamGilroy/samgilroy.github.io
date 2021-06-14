@@ -13,7 +13,7 @@ function validatePhone(txtPhone) {
 
 function validateEmail(email) {
     var a = document.getElementById(email).value;
-    const re = /\S+@\S+\.\S+/;
+    var re = /\S+@\S+\.\S+/;
     return re.test(a);
 }
 
