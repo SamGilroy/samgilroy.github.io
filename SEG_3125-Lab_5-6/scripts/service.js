@@ -20,6 +20,25 @@ function validateEmail(email) {
     }
 }
 
+function ValidateCCNumber(cardNum) {
+
+  var ccNum = document.getElementById(cardNum).value;
+  var visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+  var mastercardRegEx = /^(?:5[1-5][0-9]{14})$/;
+  var amexpRegEx = /^(?:3[47][0-9]{13})$/;
+  var discovRegEx = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
+  var isValid = false;
+
+  if (visaRegEx.test(ccNum)) {
+    isValid = true;
+  } else if(mastercardRegEx.test(ccNum)) {
+    isValid = true;
+  } else if(amexpRegEx.test(ccNum)) {
+    isValid = true;
+  } else if(discovRegEx.test(ccNum)) {
+    isValid = true;
+  }
+}
 // Using date restrictions on datepicker
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
@@ -64,6 +83,17 @@ $(document).ready(function(){
         }
         else {
             $("#email").removeClass("error");
+        }
+    });
+    
+    $("#cardNum").on("change", function(){
+        if (!validateCCNumber("cardNum")){
+            alert("Please use the proper format.");
+            $("#cardNum").val("");
+            $("#cardNum").addClass("error");
+        }
+        else {
+            $("CardNum").removeClass("error");
         }
     });
     
