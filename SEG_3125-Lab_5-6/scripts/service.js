@@ -49,6 +49,17 @@ $(document).ready(function(){
             $("#phone").removeClass("error");
         }
     });
+    
+$("#email").on("change", function(){
+        if (!validatePhone("email")){
+            alert("Please use the proper format.");
+            $("#email").val("");
+            $("#email").addClass("error");
+        }
+        else {
+            $("#email").removeClass("error");
+        }
+    });
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
     // You can try different themes (the names are under the calendars) / This is Excite Bike
