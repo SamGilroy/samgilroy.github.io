@@ -38,7 +38,6 @@ $(document).ready(function(){
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
             alert("Wrong format for phone");
-            $("#phone").val("(xxx)-xxx-xxxx");
             $("#phone").addClass("error");
         }
         else {
