@@ -80,7 +80,7 @@ $(document).ready(function(){
     
     $("#cardNum").on("change", function(){
         if (!validateCC("cardNum")){
-            alert("Please use the proper format.");
+            alert("e");
             $("#cardNum").val("");
             $("#cardNum").addClass("error");
         }
