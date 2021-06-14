@@ -31,6 +31,30 @@ function validateCC(cardNum) {
         return false;
     }
 }
+
+function validateFirst(firstName) {
+var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+var name = document.getElementById(firstName).value;
+    if (regName.test(name)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function validateLast(lastName) {
+var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+var name = document.getElementById(lastName).value;
+  
+    if (regName.test(name)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 // Using date restrictions on datepicker
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
@@ -58,7 +82,7 @@ $(document).ready(function(){
 
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
-            alert("Please use the proper format.");
+            alert("Please use the proper phone number format.");
             $("#phone").val("");
             $("#phone").addClass("error");
         }
@@ -69,7 +93,7 @@ $(document).ready(function(){
     
     $("#email").on("change", function(){
         if (!validateEmail("email")){
-            alert("Please use the proper format.");
+            alert("Please use the proper email format.");
             $("#email").val("");
             $("#email").addClass("error");
         }
@@ -80,12 +104,34 @@ $(document).ready(function(){
     
     $("#cardNum").on("change", function(){
         if (!validateCC("cardNum")){
-            alert("e");
+            alert("Please use the proper credit card format.");
             $("#cardNum").val("");
             $("#cardNum").addClass("error");
         }
         else {
             $("CardNum").removeClass("error");
+        }
+    });
+    
+    $("#firstName").on("change", function(){
+        if (!validateFirst("firstName")){
+            alert("Please enter a valid first name.");
+            $("#firstName").val("");
+            $("#firstName").addClass("error");
+        }
+        else {
+            $("firstName").removeClass("error");
+        }
+    });
+    
+    $("#lastName").on("change", function(){
+        if (!validateLsst("firstName")){
+            alert("Please enter a valid last name.");
+            $("#lastName").val("");
+            $("#lastName").addClass("error");
+        }
+        else {
+            $("lastName").removeClass("error");
         }
     });
     
