@@ -37,8 +37,8 @@ $(document).ready(function(){
     // The "error" class in style.css defines yellow background and red foreground
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
-            alert("Wrong format for phone");
-            $("#phone").val("Cheese");
+            alert("Please use the proper format.");
+            $("#phone").val("");
             $("#phone").addClass("error");
         }
         else {
