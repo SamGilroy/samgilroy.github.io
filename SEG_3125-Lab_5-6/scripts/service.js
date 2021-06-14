@@ -70,6 +70,9 @@ $("#email").on("change", function(){
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
     $( "#dateInput" ).datepicker(
         {
+            beforeShow: function(){    
+           $(".ui-datepicker").css('font-size', 12) 
+    }
             dateFormat: setDateFormat,
             // no calendar before June 1rst 2020
             minDate: 0,
