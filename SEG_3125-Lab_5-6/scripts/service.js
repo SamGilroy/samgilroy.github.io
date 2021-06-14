@@ -45,6 +45,17 @@ $(document).ready(function(){
     // and also some feedback as an Alert + putting a value in the input that shows the format required
     // the "addClass" will use the class "error" defined in style.css and add it to the phone input
     // The "error" class in style.css defines yellow background and red foreground
+    $("#email").on("change", function(){
+        if (!validateEmail("email")){
+            alert("e");
+            $("#email").val("");
+            $("#email").addClass("error");
+        }
+        else {
+            $("#email").removeClass("error");
+        }
+    });
+
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
             alert("Please use the proper format.");
@@ -56,16 +67,6 @@ $(document).ready(function(){
         }
     });
     
-$("#email").on("change", function(){
-        if (!validateEmail("email")){
-            alert("e");
-            $("#email").val("");
-            $("#email").addClass("error");
-        }
-        else {
-            $("#email").removeClass("error");
-        }
-    });
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
     // You can try different themes (the names are under the calendars) / This is Excite Bike
