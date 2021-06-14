@@ -125,7 +125,7 @@ $(document).ready(function(){
     });
     
     $("#lastName").on("change", function(){
-        if (!validateLsst("lastName")){
+        if (!validateLast("lastName")){
             alert("Please enter a valid last name.");
             $("#lastName").val("");
             $("#lastName").addClass("error");
