@@ -20,7 +20,7 @@ function validateEmail(email) {
     }
 }
 
-function ValidateCCNumber(cardNum) {
+function validateCCNumber(cardNum) {
 
   var ccNum = document.getElementById(cardNum).value;
   var visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
