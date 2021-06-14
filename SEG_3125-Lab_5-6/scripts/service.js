@@ -115,7 +115,7 @@ $(document).ready(function(){
     
     $("#firstName").on("change", function(){
         if (!validateFirst("firstName")){
-            alert("Please enter a valid first name. (At least 2 characters long)");
+            alert("Please enter a valid first name. (At least 2 letters long)");
             $("#firstName").val("");
             $("#firstName").addClass("error");
         }
@@ -126,7 +126,7 @@ $(document).ready(function(){
     
     $("#lastName").on("change", function(){
         if (!validateLast("lastName")){
-            alert("Please enter a valid last name. (At least 2 characters long)");
+            alert("Please enter a valid last name. (At least 2 letters long)");
             $("#lastName").val("");
             $("#lastName").addClass("error");
         }
