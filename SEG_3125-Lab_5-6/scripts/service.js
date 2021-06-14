@@ -12,8 +12,9 @@ function validatePhone(txtPhone) {
 }
 
 function validateEmail(email) {
+    var a = document.getElementById(email).value;
     const re = /\S+@\S+\.\S+/;
-    return re.test(String(email).toLowerCase());
+    return re.test(a);
 }
 
 // Using date restrictions on datepicker
