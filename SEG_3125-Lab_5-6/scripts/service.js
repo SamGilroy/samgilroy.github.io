@@ -23,7 +23,7 @@ function validateEmail(email) {
 function validateCC(cardNum) {
 
   var ccNum = document.getElementById(cardNum).value;
-  var visa = /^?([0-9]{4})[-. ]?([0-9]{4})[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+  var visa = /^([0-9]{4})[-. ]([0-9]{4})[-. ]([0-9]{4})[-. ]([0-9]{4})$/;
     if (visa.test(ccNum)) {
         return true;
     }
