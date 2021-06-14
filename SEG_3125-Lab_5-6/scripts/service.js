@@ -13,8 +13,13 @@ function validatePhone(txtPhone) {
 
 function validateEmail(email) {
     var a = document.getElementById(email).value;
-    var re = /\S+@\S+\.\S+/;
-    return re.test(a);
+    var re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (re.test(a)) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 // Using date restrictions on datepicker
