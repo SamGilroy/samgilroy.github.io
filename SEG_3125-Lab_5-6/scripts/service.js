@@ -58,7 +58,7 @@ $(document).ready(function(){
     
 $("#email").on("change", function(){
         if (!validateEmail("email")){
-            alert("Please use the proper format.");
+            alert("e");
             $("#email").val("");
             $("#email").addClass("error");
         }
