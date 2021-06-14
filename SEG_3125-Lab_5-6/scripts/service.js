@@ -80,9 +80,7 @@ $("#email").on("change", function(){
         }
     );
     
-    $('div.ui-datepicker').css({
-   font-size:10px;
-});
+   
 
 
     // Look at the different events on which an action can be performed
