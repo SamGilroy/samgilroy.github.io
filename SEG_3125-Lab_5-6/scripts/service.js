@@ -80,7 +80,6 @@ function disableJ(date) {
 }
 
 function disableDates(date) {
-    // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 0|| date.getDay() === 1|| date.getDay() === 2|| date.getDay() === 3|| date.getDay() === 4|| date.getDay() === 5|| date.getDay() === 6)
         return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
@@ -159,39 +158,6 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
-    $( "#dateD" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            minDate: 0,
-            maxDate: '+4M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableD
-        }
-    );
-    
-    $( "#dateA" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            minDate: 0,
-            maxDate: '+4M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableA
-        }
-    );
-    
-    $( "#dateJ" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            minDate: 0,
-            maxDate: '+4M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableJ
-        }
-    );
-    
      $( "#dateInput" ).datepicker(
         {
             dateFormat: setDateFormat,
