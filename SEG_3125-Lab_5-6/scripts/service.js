@@ -172,8 +172,7 @@ $(document).ready(function(){
  days = 3;    
  }
  if (val == ""){
- days = 0;    
- alert("Please choose an option!);    
+ days = 0;      
  }
  alert(days);
 });    
