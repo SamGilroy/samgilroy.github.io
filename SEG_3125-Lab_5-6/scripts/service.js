@@ -177,6 +177,10 @@ $(document).ready(function(){
         }
     });
     
+     $("#inputSpecialist").on("change", function(){
+        validate();
+    });
+    
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
     // You can try different themes (the names are under the calendars) / This is Excite Bike
