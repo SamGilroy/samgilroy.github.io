@@ -152,7 +152,7 @@ $(document).ready(function(){
  if (val == ""){
  alert("choose 1");
  }
-})
+});
 });
    
     
