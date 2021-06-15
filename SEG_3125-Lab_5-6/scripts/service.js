@@ -186,12 +186,14 @@ $(document).ready(function(){
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
     $( "#dateInput" ).datepicker(
         {
+            
             dateFormat: setDateFormat,
             // no calendar before June 1rst 2020
             minDate: 0,
             maxDate: '+3M',
             // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableDates    
       
         }
     );
