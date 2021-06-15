@@ -55,12 +55,17 @@ var name = document.getElementById(lastName).value;
     }
 }
 
-const setDateFormat = "dd/mm/yy";
+var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
+const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
-    if (date.getDay() === 0 || date.getDay() === 6)
+    // Sunday is Day 0, disable all Sundays
+    if (date.getDay() === 0||date.getDay() === 6)
         return [false];
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [ unavailableDates.indexOf(string) === -1 ]
 }
+
 
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
@@ -134,17 +139,18 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
-     $( "#dateInput" ).datepicker(
+    $( "#dateInput" ).datepicker(
         {
             dateFormat: setDateFormat,
-            minDate: 0,
-            maxDate: '+3M',
+            // no calendar before June 1rst 2020
+            minDate: new Date('06/01/2020'),
+            maxDate: '+4M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableDates
         }
     );
     
-   
-
-
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp
     // Here, we put
