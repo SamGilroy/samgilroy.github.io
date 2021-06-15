@@ -55,42 +55,6 @@ var name = document.getElementById(lastName).value;
     }
 }
 
-var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
-const setDateFormat = "mm/dd/yy";
-
-function disableDates(date) {
-    // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 0 || date.getDay() === 1 || date.getDay() === 2 || date.getDay() === 3 || date.getDay() === 4 || date.getDay() === 5 || date.getDay() === 6)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
-}
-
-function disableD(date) {
-    // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 0 || date.getDay() === 6)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
-}
-
-function disableA(date) {
-    // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 1 || date.getDay() === 5)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
-}
-
-function disableJ(date) {
-    // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 2 || date.getDay() === 3)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
-}
-
-
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
 
@@ -155,44 +119,46 @@ $(document).ready(function(){
         }
     });
     
-    var setting, currentSpecialist = 0; 
+     var setting, currentSpecialist = 0;
+  
+  /* Datepicker */
+  
+  function daysD(date){ 
+    var day = date.getDay(); 
+    return [!(day === 0 || day === 6), '']; 
+  }
+  
+  function daysA(date){ 
+    var day = date.getDay(); 
+    return [!(day === 1 || day === 5), '']; 
+  }
+  
+  function daysJ(date){ 
+    var day = date.getDay(); 
+    return [!(day === 2 || day === 3), '']; 
+  }
+  
   function loadDatePicker(setting) {
     $("#dateInput").datepicker("destroy");
     if(setting == 'D') {
-      $( "#dateInput" ).datepicker({ dateFormat: setDateFormat,
-            minDate: 0,
-            maxDate: '+4M',
-            beforeShowDay: disableD});  
+      $( "#dateInput" ).datepicker({ beforeShowDay: daysD, minDate: 0, maxDate: "+4M" }); 
     }
     else if(setting == 'A') {
-      $( "#dateInput" ).datepicker({ dateFormat: setDateFormat,
-            minDate: 0,
-            maxDate: '+4M',
-            beforeShowDay: disableA}); 
+      $( "#dateInput" ).datepicker({ beforeShowDay: daysA, minDate: 0, maxDate: "+4M" }); 
     }
-    else if (setting == 'J'){
-    $( "#dateInput" ).datepicker({ dateFormat: setDateFormat,
-            minDate: 0,
-            maxDate: '+4M',
-            beforeShowDay: disableD}); 
-    }   
-        
+    else if(setting == 'J') {
+      $( "#dateInput" ).datepicker({ beforeShowDay: daysJ, minDate: 0, maxDate: "+4M" }); 
+    }
     $( "#dateInput" ).datepicker("refresh");
   }
   
   /* Select box */
   
   $('select#inputSpecialist').change(function() {
-    currentSpecialist = $(this).val() == 1 ? loadDatePicker(setting = 'D') : loadDatePicker(setting = 'A') : loadDatePicker(setting = 'J');
+    currentSpecialist = $(this).val() == 1 ? loadDatePicker(setting = 'D') : loadDatePicker(setting = 'A');
   });
+  
 
-    
-    
-    
-    
-    
-    
-    
     
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp
