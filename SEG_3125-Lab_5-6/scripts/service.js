@@ -99,7 +99,7 @@ $(document).ready(function(){
     // and also some feedback as an Alert + putting a value in the input that shows the format required
     // the "addClass" will use the class "error" defined in style.css and add it to the phone input
     // The "error" class in style.css defines yellow background and red foreground
-    int days = 0;
+   
 
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
@@ -163,6 +163,7 @@ $(document).ready(function(){
  }
 });
 
+ int days = 0;   
  $('#inputSpecialist').change(function () {
  var val =  $('#inputSpecialist').val();
  if (val == 1)
