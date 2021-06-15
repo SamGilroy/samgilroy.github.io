@@ -184,6 +184,16 @@ $(document).ready(function(){
         }
     );
     
+     $( "#dateInput" ).datepicker(
+        {
+            dateFormat: setDateFormat,
+            minDate: 0,
+            maxDate: '+4M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+        }
+    );
+    
    
 
 
