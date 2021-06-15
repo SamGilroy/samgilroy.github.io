@@ -133,7 +133,27 @@ $(document).ready(function(){
             $("lastName").removeClass("error");
         }
     });
-    
+
+    $(document).ready(function(){
+ $('#inputSpecialist').change(function () {
+ var val =  $('#inputSpecialist').val();
+ if (val == 1)
+ {
+ alert("D");
+ }
+ if (val == 2)
+ {
+ alert("A");
+ }
+ if (val == 3)
+ {
+ alert("J");
+ }
+ if (val == ""){
+ alert("choose 1");
+ }
+})
+});
    
     
 
