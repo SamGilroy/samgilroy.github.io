@@ -156,13 +156,6 @@ $(document).ready(function(){
         }
     });
     
-    $('#inputService').change(function () {
- var val =  $('#inputService').val();
- if (val == ""){
- alert("Please choose an option!");
- }
-});
-
  days = 0;   
  $('#inputSpecialist').change(function () {
  var val =  $('#inputSpecialist').val();
