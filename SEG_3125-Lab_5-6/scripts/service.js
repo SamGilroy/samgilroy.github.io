@@ -193,8 +193,23 @@ $(document).ready(function(){
             maxDate: '+3M',
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableDates    
-      
+            beforeShowDay: disableDates
+            if (days == 1)
+            {
+                beforeShowDay: disableD 
+            }
+            if (days == 2)
+            {
+                beforeShowDay: disableA
+            }
+            if (days == 3)
+            {    
+            beforeShowDay: disableJ
+            }
+            if (days == 0)
+            {
+                beforeShowDay: disableDates  
+            }
         }
     );
     
