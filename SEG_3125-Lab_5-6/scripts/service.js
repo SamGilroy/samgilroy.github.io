@@ -58,7 +58,7 @@ var name = document.getElementById(lastName).value;
 const setDateFormat = "dd/mm/yy";
 
 function disableDates(date) {
-    if (date.getDay() === 1)
+    if (date.getDay() === 0||date.getDay() === 1||date.getDay() === 2||date.getDay() === 3||date.getDay() === 4||date.getDay() === 5||date.getDay() === 6)
         return [false];
 }
 
