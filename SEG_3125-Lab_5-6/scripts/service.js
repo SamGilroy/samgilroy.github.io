@@ -55,11 +55,15 @@ var name = document.getElementById(lastName).value;
     }
 }
 
-const setDateFormat = "dd/mm/yy";
+var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
+const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
-    if (date.getDay() === 0||date.getDay() === 1||date.getDay() === 2||date.getDay() === 3||date.getDay() === 4||date.getDay() === 5||date.getDay() === 6)
+    // Sunday is Day 0, disable all Sundays
+    if (date.getDay() === 0)
         return [false];
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [ unavailableDates.indexOf(string) === -1 ]
 }
 
 // HERE, JQuery "LISTENING" starts
