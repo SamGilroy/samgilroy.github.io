@@ -155,89 +155,44 @@ $(document).ready(function(){
         }
     });
     
- days = 0;   
- $('#inputSpecialist').change(function () {
- var val =  $('#inputSpecialist').val();
- if (val == 1)
- {
- days = 1;     
- }
- if (val == 2)
- {
- days = 2;    
- }
- if (val == 3)
- {
- days = 3;    
- }
- if (val == ""){
- days = 0;      
- }
- alert(days);    
-});    
+    var setting, currentSpecialist = 0; 
+  function loadDatePicker(setting) {
+    $("#dateInput").datepicker("destroy");
+    if(setting == 'D') {
+      $( "#dateInput" ).datepicker({ dateFormat: setDateFormat,
+            minDate: 0,
+            maxDate: '+4M',
+            beforeShowDay: disableD});  
+    }
+    else if(setting == 'A') {
+      $( "#dateInput" ).datepicker({ dateFormat: setDateFormat,
+            minDate: 0,
+            maxDate: '+4M',
+            beforeShowDay: disableA}); 
+    }
+    else if (setting == 'J'){
+    $( "#dateInput" ).datepicker({ dateFormat: setDateFormat,
+            minDate: 0,
+            maxDate: '+4M',
+            beforeShowDay: disableD}); 
+    }   
+        
+    $( "#dateInput" ).datepicker("refresh");
+  }
+  
+  /* Select box */
+  
+  $('select#inputSpecialist').change(function() {
+    currentSpecialist = $(this).val() == 1 ? loadDatePicker(setting = 'D') : loadDatePicker(setting = 'A') : loadDatePicker(setting = 'J');
+  });
 
-    // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
-    // You can try different themes (the names are under the calendars) / This is Excite Bike
-    // To use a different theme you must include its css in your HTML file.
-    // The one I included in my HTML is the Excite Bike, but you can try others
-
-    // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
-    // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
-     if (days == 1){
-    $( "#dateInput" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-            minDate: 0,
-            maxDate: '+3M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableD
-        }
-    );
-    } 
     
-    else if (days == 2){
-    $( "#dateInput" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-            minDate: 0,
-            maxDate: '+3M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableA
-        }
-    );
-    } 
     
-    else if (days == 3){
-    $( "#dateInput" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-            minDate: 0,
-            maxDate: '+3M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableJ
-        }
-    );
-    }  
     
-    else {
-    $( "#dateInput" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-            minDate: 0,
-            maxDate: '+3M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableDates
-        }
-    );
-    }  
+    
+    
+    
+    
     
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp
