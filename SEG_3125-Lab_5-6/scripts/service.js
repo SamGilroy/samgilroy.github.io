@@ -55,7 +55,7 @@ var name = document.getElementById(lastName).value;
     }
 }
 
-const setDateFormat = "dd/mm/yy";
+const setDateFormat = "mm/dd/yy";
 function disableD(date) {
     // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 0 || date.getDay() === 6)
