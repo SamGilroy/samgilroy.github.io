@@ -79,6 +79,14 @@ function disableJ(date) {
     return [ unavailableDates.indexOf(string) === -1 ]
 }
 
+function disableDates(date) {
+    // Sunday is Day 0, disable all Sundays
+    if (date.getDay() === 0|| date.getDay() === 1|| date.getDay() === 2|| date.getDay() === 3|| date.getDay() === 4|| date.getDay() === 5|| date.getDay() === 6)
+        return [false];
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [ unavailableDates.indexOf(string) === -1 ]
+}
+
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
 
@@ -191,6 +199,7 @@ $(document).ready(function(){
             maxDate: '+4M',
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableDates
         }
     );
     
