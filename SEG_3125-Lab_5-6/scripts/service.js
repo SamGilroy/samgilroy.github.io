@@ -139,7 +139,6 @@ $(document).ready(function(){
             dateFormat: setDateFormat,
             minDate: 0,
             maxDate: '+3M',
-            beforeShowDay: disableDates
         }
     );
     
