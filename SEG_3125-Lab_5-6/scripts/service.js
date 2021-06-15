@@ -55,21 +55,29 @@ var name = document.getElementById(lastName).value;
     }
 }
 
-// Using date restrictions on datepicker
-// Document of datepicker is here: https://api.jqueryui.com/datepicker/
-// The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
-// Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
-var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
-const setDateFormat = "mm/dd/yy";
-
-function disableDates(date) {
+function disableD(date) {
     // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 3|| date.getDay() === 4 || date.getDay() === 5 || date.getDay() === 6)
+    if (date.getDay() === 0 || date.getDay() === 6)
         return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
 }
 
+function disableA(date) {
+    // Sunday is Day 0, disable all Sundays
+    if (date.getDay() === 1|| date.getDay() === 5)
+        return [false];
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [ unavailableDates.indexOf(string) === -1 ]
+}
+
+function disableJ(date) {
+    // Sunday is Day 0, disable all Sundays
+    if (date.getDay() === 3|| date.getDay() === 4)
+        return [false];
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [ unavailableDates.indexOf(string) === -1 ]
+}
 
 // HERE, JQuery "LISTENING" starts
 $(document).ready(function(){
@@ -143,14 +151,36 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
-    $( "#dateInput" ).datepicker(
+    $( "#dateD" ).datepicker(
         {
             dateFormat: setDateFormat,
             minDate: 0,
             maxDate: '+4M',
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableDates
+            beforeShowDay: disableD
+        }
+    );
+    
+    $( "#dateA" ).datepicker(
+        {
+            dateFormat: setDateFormat,
+            minDate: 0,
+            maxDate: '+4M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableA
+        }
+    );
+    
+    $( "#dateJ" ).datepicker(
+        {
+            dateFormat: setDateFormat,
+            minDate: 0,
+            maxDate: '+4M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableJ
         }
     );
     
