@@ -55,15 +55,11 @@ var name = document.getElementById(lastName).value;
     }
 }
 
-var unavailableDates = ["29/06/2020","07/07/2020","07/10/2020"];
 const setDateFormat = "dd/mm/yy";
 
 function disableDates(date) {
-    // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 1)
         return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
 }
 
 // HERE, JQuery "LISTENING" starts
@@ -141,7 +137,6 @@ $(document).ready(function(){
      $( "#dateInput" ).datepicker(
         {
             dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
             minDate: 0,
             maxDate: '+4M',
             // used to disable some dates
