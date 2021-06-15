@@ -138,9 +138,18 @@ $(document).ready(function(){
     return [!(day === 2 || day === 3), '']; 
   }
   
+  function daysNone(date){ 
+    var day = date.getDay(); 
+    return [!(day === 0 ||day === 1 || day === 2 || day === 3 || day === 4 || day === 5 || day === 6), '']; 
+  }
+  
+  
   function loadDatePicker(setting) {
     $("#dateInput").datepicker("destroy");
-    if(setting == 'D') {
+    if (setting == 'None'){
+      $( "#dateInput" ).datepicker({ beforeShowDay: daysNone, minDate: 0, maxDate: "+4M" }); 
+    }
+    else if(setting == 'D') {
       $( "#dateInput" ).datepicker({ beforeShowDay: daysD, minDate: 0, maxDate: "+4M" }); 
     }
     else if(setting == 'A') {
@@ -155,7 +164,24 @@ $(document).ready(function(){
   /* Select box */
   
   $('select#inputSpecialist').change(function() {
-    currentSpecialist = $(this).val() == 1 ? loadDatePicker(setting = 'D') : loadDatePicker(setting = 'A');
+    currentSpecialist = $(this).val();
+    if (currentSpecialist == 1)
+      {
+        loadDatePicker(setting = 'D');
+      }
+    else if (currentSpecialist == 2)
+      {
+        loadDatePicker(setting = 'A');
+      }
+    else if (currentSpecialist == 3)
+      {
+        loadDatePicker(setting = 'J');
+      }
+    else if (currentSpecialist == 0)
+      {
+        loadDatePicker(setting = 'None');
+      }
+    
   });
   
 
