@@ -54,11 +54,12 @@ var name = document.getElementById(lastName).value;
         return false;
     }
 }
-const setDateFormat = "dd/mm/yy";
+
+const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
     // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 0||date.getDay() === 1||date.getDay() === 2)
+    if (date.getDay() === 1)
         return [false];
 }
 
