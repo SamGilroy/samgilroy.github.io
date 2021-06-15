@@ -55,7 +55,6 @@ var name = document.getElementById(lastName).value;
     }
 }
 
-
 var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
 const setDateFormat = "mm/dd/yy";
 
@@ -174,6 +173,7 @@ $(document).ready(function(){
  if (val == ""){
  days = 0;      
  }
+ alert("test");    
 });    
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
@@ -183,9 +183,9 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
+    if (days == 0){
     $( "#dateInput" ).datepicker(
         {
-            
             dateFormat: setDateFormat,
             // no calendar before June 1rst 2020
             minDate: 0,
@@ -193,24 +193,50 @@ $(document).ready(function(){
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
             beforeShowDay: disableDates
-            if (days == 1)
-            {
-                beforeShowDay: disableD 
-            }
-            if (days == 2)
-            {
-                beforeShowDay: disableA
-            }
-            if (days == 3)
-            {    
-            beforeShowDay: disableJ
-            }
-            if (days == 0)
-            {
-                beforeShowDay: disableDates  
-            }
         }
     );
+    }  
+     if (days == 1){
+    $( "#dateInput" ).datepicker(
+        {
+            dateFormat: setDateFormat,
+            // no calendar before June 1rst 2020
+            minDate: 0,
+            maxDate: '+3M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableD
+        }
+    );
+    } 
+    
+     if (days == 2){
+    $( "#dateInput" ).datepicker(
+        {
+            dateFormat: setDateFormat,
+            // no calendar before June 1rst 2020
+            minDate: 0,
+            maxDate: '+3M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableA
+        }
+    );
+    } 
+    
+    if (days == 3){
+    $( "#dateInput" ).datepicker(
+        {
+            dateFormat: setDateFormat,
+            // no calendar before June 1rst 2020
+            minDate: 0,
+            maxDate: '+3M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableJ
+        }
+    );
+    }  
     
     // Look at the different events on which an action can be performed
     // https://www.w3schools.com/jquery/jquery_events.asp
