@@ -179,6 +179,7 @@ $(document).ready(function(){
  days = 6;    
  }
  if (val == ""){
+ days = 0;    
  //alert("Please choose an option!);    
  }
  alert(days);      
