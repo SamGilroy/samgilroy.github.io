@@ -161,21 +161,34 @@ $(document).ready(function(){
  var val =  $('#inputSpecialist').val();
  if (val == 1)
  {
- alert("D");
+ alert("D Hours");
+ disableD(date);    
  }
  if (val == 2)
  {
- alert("A");
+ alert("A Hours");
+ disableA(date);    
  }
  if (val == 3)
  {
- alert("J");
+ alert("Jhours");
+ disableJ(date);    
  }
  if (val == ""){
- alert("choose 1");
+ alert("Please choose an option!);
+ disableDates(date);      
  }
 });
 });
+    
+ $(document).ready(function(){
+ $('#inputService').change(function () {
+ var val =  $('#inputService').val();
+ if (val == ""){
+ alert("Please choose an option!");
+ }
+});
+});    
    
     
 
