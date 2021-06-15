@@ -155,6 +155,13 @@ $(document).ready(function(){
             $("lastName").removeClass("error");
         }
     });
+    
+    $('#inputService').change(function () {
+ var val =  $('#inputService').val();
+ if (val == ""){
+ alert("Please choose an option!");
+ }
+});
 
  $('#inputSpecialist').change(function () {
  var val =  $('#inputSpecialist').val();
@@ -177,17 +184,7 @@ $(document).ready(function(){
  alert("Please choose an option!);
  //disableDates(date);      
  }
-});
-
- $('#inputService').change(function () {
- var val =  $('#inputService').val();
- if (val == ""){
- alert("Please choose an option!");
- }
-});
-   
-   
-    
+});    
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
     // You can try different themes (the names are under the calendars) / This is Excite Bike
