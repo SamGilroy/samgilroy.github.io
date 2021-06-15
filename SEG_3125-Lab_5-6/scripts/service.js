@@ -64,7 +64,7 @@ const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
     // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 3)
+    if (date.getDay() === 3|| date.getDay() === 4 || date.getDay() === 5 || date.getDay() === 6)
         return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
