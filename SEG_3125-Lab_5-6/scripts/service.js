@@ -99,7 +99,7 @@ $(document).ready(function(){
     // and also some feedback as an Alert + putting a value in the input that shows the format required
     // the "addClass" will use the class "error" defined in style.css and add it to the phone input
     // The "error" class in style.css defines yellow background and red foreground
-    
+    int days = 0;
 
     $("#phone").on("change", function(){
         if (!validatePhone("phone")){
@@ -167,23 +167,20 @@ $(document).ready(function(){
  var val =  $('#inputSpecialist').val();
  if (val == 1)
  {
- alert("D Hours");
-    
+ days = 4;     
  }
  if (val == 2)
  {
- alert("A Hours");
-     
+ days = 5;    
  }
  if (val == 3)
  {
- alert("Jhours");
-     
+ days = 6;    
  }
  if (val == ""){
- alert("Please choose an option!);
-      
+ //alert("Please choose an option!);    
  }
+ alert(days);      
 });    
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
