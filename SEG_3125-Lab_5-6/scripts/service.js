@@ -174,7 +174,6 @@ $(document).ready(function(){
  if (val == ""){
  days = 0;      
  }
- alert(days);
 });    
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
