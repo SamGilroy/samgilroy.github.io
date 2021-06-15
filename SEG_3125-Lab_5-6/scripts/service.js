@@ -64,7 +64,7 @@ const setDateFormat = "mm/dd/yy";
 
 function disableDates(date) {
     // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 0)
+    if (date.getDay() === 0 || date.getDay() === 6)
         return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
@@ -146,7 +146,6 @@ $(document).ready(function(){
     $( "#dateInput" ).datepicker(
         {
             dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
             minDate: 0,
             maxDate: '+4M',
             // used to disable some dates
