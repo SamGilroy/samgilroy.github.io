@@ -173,7 +173,7 @@ $(document).ready(function(){
  if (val == ""){
  days = 0;      
  }
- alert("test");    
+ alert(days);    
 });    
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
@@ -183,19 +183,6 @@ $(document).ready(function(){
 
     // Also, here is a good tutorial for playing with the datepicker in https://webkul.com/blog/jquery-datepicker/
     // Datepicker is also documented as one of the widgets here: https://api.jqueryui.com/category/widgets/
-    if (days == 0){
-    $( "#dateInput" ).datepicker(
-        {
-            dateFormat: setDateFormat,
-            // no calendar before June 1rst 2020
-            minDate: 0,
-            maxDate: '+3M',
-            // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
-            beforeShowDay: disableDates
-        }
-    );
-    }  
      if (days == 1){
     $( "#dateInput" ).datepicker(
         {
@@ -210,7 +197,7 @@ $(document).ready(function(){
     );
     } 
     
-     if (days == 2){
+    else if (days == 2){
     $( "#dateInput" ).datepicker(
         {
             dateFormat: setDateFormat,
@@ -224,7 +211,7 @@ $(document).ready(function(){
     );
     } 
     
-    if (days == 3){
+    else if (days == 3){
     $( "#dateInput" ).datepicker(
         {
             dateFormat: setDateFormat,
@@ -234,6 +221,20 @@ $(document).ready(function(){
             // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
             beforeShowDay: disableJ
+        }
+    );
+    }  
+    
+    else {
+    $( "#dateInput" ).datepicker(
+        {
+            dateFormat: setDateFormat,
+            // no calendar before June 1rst 2020
+            minDate: 0,
+            maxDate: '+3M',
+            // used to disable some dates
+            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: disableDates
         }
     );
     }  
