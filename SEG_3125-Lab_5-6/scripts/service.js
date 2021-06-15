@@ -55,27 +55,7 @@ var name = document.getElementById(lastName).value;
     }
 }
 
-function validate()
-{
- var ddl = document.getElementById("inputSpecialist");
- var selectedValue = ddl.options[ddl.selectedIndex].value;
-    if (selectedValue == "1")
-   {
-    alert("1");
-   }
-   else if (selectedValue == "2")
-   {
-      alert("2");
-   }
-   else if (selectedValue == "3"){
-   {
-    alert("3");  
-   }
-   else
-   {
-    alert("none");  
-   }      
-}
+
 
 var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
 const setDateFormat = "mm/dd/yy";
@@ -88,29 +68,7 @@ function disableDates(date) {
     return [ unavailableDates.indexOf(string) === -1 ]
 }
 
-function disableD(date) {
-    // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 0 || date.getDay() === 6)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
-}
 
-function disableA(date) {
-    // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 1 || date.getDay() === 5)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
-}
-
-function disableJ(date) {
-    // Sunday is Day 0, disable all Sundays
-    if (date.getDay() === 2 || date.getDay() === 3)
-        return [false];
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
-}
 
 
 // HERE, JQuery "LISTENING" starts
@@ -177,9 +135,7 @@ $(document).ready(function(){
         }
     });
     
-     $("#inputSpecialist").on("change", function(){
-        validate();
-    });
+    
     
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
