@@ -58,7 +58,6 @@ var name = document.getElementById(lastName).value;
 const setDateFormat = "dd/mm/yy";
 
 function disableDates(date) {
-    // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 0 || date.getDay() === 6)
         return [false];
 }
@@ -139,7 +138,7 @@ $(document).ready(function(){
         {
             dateFormat: setDateFormat,
             minDate: 0,
-            maxDate: '+4M',
+            maxDate: '+3M',
             beforeShowDay: disableDates
         }
     );
