@@ -168,21 +168,21 @@ $(document).ready(function(){
  if (val == 1)
  {
  alert("D Hours");
- //disableD(date);    
+    
  }
  if (val == 2)
  {
  alert("A Hours");
- //disableA(date);    
+     
  }
  if (val == 3)
  {
  alert("Jhours");
- //disableJ(date);    
+     
  }
  if (val == ""){
  alert("Please choose an option!);
- //disableDates(date);      
+      
  }
 });    
 
