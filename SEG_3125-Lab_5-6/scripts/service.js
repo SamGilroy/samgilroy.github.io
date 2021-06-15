@@ -168,21 +168,21 @@ $(document).ready(function(){
  var val =  $('#inputSpecialist').val();
  if (val == 1)
  {
- days = 4;     
+ days = 1;     
  }
  if (val == 2)
  {
- days = 5;    
+ days = 2;    
  }
  if (val == 3)
  {
- days = 6;    
+ days = 3;    
  }
  if (val == ""){
  days = 0;    
- //alert("Please choose an option!);    
+ alert("Please choose an option!);    
  }
- alert(days);      
+ alert(days);
 });    
 
     // To change the style of the calender, look in jqueryui.com, under Themes, in the ThemeRoller Gallery
@@ -199,8 +199,19 @@ $(document).ready(function(){
             minDate: 0,
             maxDate: '+3M',
             // used to disable some dates
-            beforeShowDay: $.datepicker.noWeekends,
+            beforeShowDay: $.datepicker.noWeekends
+            if (days == 1){
+            beforeShowDay: disableD
+            }
+            if (days == 2){
+            beforeShowDay: disableA
+            }
+            if (days == 3){
+               beforeShowDay: disableJ
+            }
+            else{
             beforeShowDay: disableDates
+            }
         }
     );
     
