@@ -156,39 +156,36 @@ $(document).ready(function(){
         }
     });
 
-    $(document).ready(function(){
  $('#inputSpecialist').change(function () {
  var val =  $('#inputSpecialist').val();
  if (val == 1)
  {
  alert("D Hours");
- disableD(date);    
+ //disableD(date);    
  }
  if (val == 2)
  {
  alert("A Hours");
- disableA(date);    
+ //disableA(date);    
  }
  if (val == 3)
  {
  alert("Jhours");
- disableJ(date);    
+ //disableJ(date);    
  }
  if (val == ""){
  alert("Please choose an option!);
- disableDates(date);      
+ //disableDates(date);      
  }
 });
-});
-    
- $(document).ready(function(){
+
  $('#inputService').change(function () {
  var val =  $('#inputService').val();
  if (val == ""){
  alert("Please choose an option!");
  }
 });
-});    
+   
    
     
 
