@@ -163,7 +163,7 @@ $(document).ready(function(){
  }
 });
 
- int days = 0;   
+ days = 0;   
  $('#inputSpecialist').change(function () {
  var val =  $('#inputSpecialist').val();
  if (val == 1)
