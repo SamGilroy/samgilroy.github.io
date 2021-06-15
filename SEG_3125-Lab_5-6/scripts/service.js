@@ -55,10 +55,13 @@ var name = document.getElementById(lastName).value;
     }
 }
 
+const setDateFormat = "dd/mm/yy";
 function disableD(date) {
     // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 0 || date.getDay() === 6)
         return [false];
+    else
+        return [true];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
 }
@@ -67,6 +70,8 @@ function disableA(date) {
     // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 1|| date.getDay() === 5)
         return [false];
+    else 
+        return [true];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
 }
@@ -75,6 +80,8 @@ function disableJ(date) {
     // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 3|| date.getDay() === 4)
         return [false];
+    else
+        return [true];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
 }
