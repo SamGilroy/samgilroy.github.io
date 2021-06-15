@@ -63,7 +63,6 @@ function disableD(date) {
     else
         return [true];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
 }
 
 function disableA(date) {
@@ -73,7 +72,6 @@ function disableA(date) {
     else 
         return [true];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
 }
 
 function disableJ(date) {
@@ -83,14 +81,12 @@ function disableJ(date) {
     else
         return [true];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
 }
 
 function disableDates(date) {
     if (date.getDay() === 0|| date.getDay() === 1|| date.getDay() === 2|| date.getDay() === 3|| date.getDay() === 4|| date.getDay() === 5|| date.getDay() === 6)
         return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
 }
 
 // HERE, JQuery "LISTENING" starts
