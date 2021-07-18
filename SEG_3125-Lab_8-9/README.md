@@ -1,4 +1,3 @@
-# SEG3125_lab9
-plese see lab9_report.pdf
+SEG 3125 LAb #9
 
-All codes are in "shopping" folder
+See attatched report for details.
