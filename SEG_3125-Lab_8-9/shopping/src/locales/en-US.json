@@ -1,0 +1,45 @@
+{
+
+    "Home": "Home",
+    "Categories": "Categories",
+    "Contact": "Contact",
+    "Search": "Search brands name",
+    "SearchBtn":"Search",
+    "Price":"Price",
+    "Brand":"Brand",
+    "Description":"Description",
+    "Detail":"Detail",
+    "Add":"Add",
+    "Payment":"Payment",
+    "Purchase":"Purchase",
+
+    "HolderName":"Holder Name",
+    "CardNumber":"Card Number",
+    "CVV":"CVV",
+    "TotalAmount":"Total Amount",
+    "Shipping":"Shipping",
+    "Tax":"Tax",
+    "PlaceOrder":"Place Order",
+    "ShoppingInformation":" Shopping Information",
+    "FirstName":"First Name",
+    "LastName":"Last Name",
+    "Address":"Address",
+    "City":"City",
+    "Province":"Province",
+    "Zip":"Zip",
+    "Phone":"Purchase",
+
+    "alert1":"Please enter all payment information",
+    "alert2":"Please enter the correct card number",
+    "alert3":"Success",
+    "alert4":"Shopping cart already exists",
+
+    
+
+    "Man":"Man",
+    "Woman":"Woman",
+    "Casual":"Casual",
+    "All":"All"
+
+
+}
