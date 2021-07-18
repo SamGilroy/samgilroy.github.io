@@ -1,5 +1,7 @@
 {
+  
   "name": "shopping",
+  "homepage": "http://samgilroy.github.io/SEG3125-Lab_8-9",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
