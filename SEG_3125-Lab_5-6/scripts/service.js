@@ -1,3 +1,4 @@
+//confirm if it is a valid phone number being entered
 function validatePhone(txtPhone) {
     var a = document.getElementById(txtPhone).value;
     var filter = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
@@ -8,7 +9,7 @@ function validatePhone(txtPhone) {
         return false;
     }
 }
-
+//confirm if it is a valid email format
 function validateEmail(email) {
     var b = document.getElementById(email).value;
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -19,7 +20,7 @@ function validateEmail(email) {
         return false;
     }
 }
-
+//valid cc
 function validateCC(cardNum) {
 
   var ccNum = document.getElementById(cardNum).value;
@@ -31,7 +32,7 @@ function validateCC(cardNum) {
         return false;
     }
 }
-
+//valid name being entered
 function validateFirst(firstName) {
 var regName = /^[a-zA-Z]{2,}$/;
 var name = document.getElementById(firstName).value;
@@ -43,6 +44,7 @@ var name = document.getElementById(firstName).value;
     }
 }
 
+//valid last name
 function validateLast(lastName) {
 var regName = /^[a-zA-Z]{2,}$/;
 var name = document.getElementById(lastName).value;
@@ -122,17 +124,17 @@ $(document).ready(function(){
      var setting, currentSpecialist = 0;
   
   /* Datepicker */
-  
+  //days that david works
   function daysD(date){ 
     var day = date.getDay(); 
     return [!(day === 0 || day === 6), '']; 
   }
-  
+  //days that amanda works
   function daysA(date){ 
     var day = date.getDay(); 
     return [!(day === 1 || day === 5), '']; 
   }
-  
+  //days that joe works
   function daysJ(date){ 
     var day = date.getDay(); 
     return [!(day === 2 || day === 3), '']; 
