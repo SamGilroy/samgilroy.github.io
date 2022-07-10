@@ -1,0 +1,5 @@
+-This lab is an extension of lab 4
+- The goal of it is to Create a phisiotherapy appointment booking center.
+-source code at 
+- website is at https://samgilroy.github.io/SEG_3125-Lab_5-6/
+- various features included are commented in the files
